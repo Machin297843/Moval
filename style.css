@@ -1,0 +1,45 @@
+:root {
+  --primary-color: #407135; 
+
+  --primary-color-hover: #2d5624; 
+}
+
+*{
+    font-family: 'Londrina Solid', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+
+/** <-- Navigation Bar --> **/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: var(--primary-color-hover);
+}
+
+/** <-- Hero Section --> **/
+#heroSection {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+#heroDivContainer{
+    margin: auto;
+}
