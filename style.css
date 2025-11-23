@@ -1,22 +1,26 @@
 :root {
-  --primary-color: #407135; 
-
-  --primary-color-hover: #2d5624; 
+  --primary-color: #407135;
+  --primary-color-hover: #2d5624;
+  --grey-300: #222222;
 }
 
-*{
-    font-family: 'Londrina Solid', cursive;
-    margin: 0;
-    padding: 0;
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
 
 /** <-- Navigation Bar --> **/
+
+.navContainer {
+  display: flex;
+  background-color: var(--primary-color);
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: var(--primary-color);
   display: flex;
   justify-content: center;
 }
@@ -33,18 +37,63 @@ ul li a:hover {
 }
 
 /** <-- Hero Section --> **/
-#heroSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 500px;
-    background-color: aliceblue;
+
+.heroImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 820px;
+  background-image: linear-gradient(
+      rgba(61, 105, 53, 0.5),
+      rgba(61, 105, 53, 0.5)
+    ),
+    url("Assets/MovalHero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
-#heroDivContainer{
+.heroDivContainer {
+  color: white;
+  text-align: center;
+}
 
-    background-color: red;
-    text-align: center;
-    width: 456px;
+/** <-- Buttons --> **/
+
+.btnPrimary {
+  color: var(--grey-300);
+  background-color: white;
+  font-size: 18px;
+  padding: 12px 54px;
+  border-radius: 8px;
+  border: solid 2px var(--grey-300);
+  box-shadow: 0px 6px var(--grey-300);
+}
+
+.btnPrimary:hover {
+  cursor: pointer;
+  background-color: #dddddd;
+}
+.btnPrimary:focus {
+}
+
+.btnSecondary {
+  font-family: "Poppins", sans-serif;
+  color: var(--grey-300);
+  background-color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 12px 24px;
+  box-shadow: 0px 0px 16px rgb(0, 0, 0, 0.3);
+}
+
+/** Typography **/
+
+h1 {
+  color: rgb(255, 255, 255);
+  line-height: 100%;
+  font-size: 80px;
+  -webkit-text-stroke: 2px black;
 }
