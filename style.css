@@ -13,27 +13,54 @@
 /** <-- Navigation Bar --> **/
 
 .navContainer {
-  display: flex;
   background-color: var(--primary-color);
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.navContent {
+  max-width: 1340px;        /* ancho máximo de tu grilla */
+  margin: auto;           /* centra el contenido */
+  
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 
-ul li a {
+.navContent img {
+  height: 46px;            
+}
+
+.navContent nav {
+  flex: 1;
+}
+
+.navContent ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 8px;                
+}
+
+.navContent ul li a {
   display: block;
   color: white;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-ul li a:hover {
+.navContent ul li a:hover {
   background-color: var(--primary-color-hover);
+}
+
+/* Botón lo más a la derecha posible, sigue dentro de la grilla */
+.btnSecondary {
+  font-family: "Poppins", sans-serif;
+  color: var(--grey-300);
+  background-color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 12px 24px;
+  box-shadow: 0px 0px 16px rgb(0, 0, 0, 0.3);
+  border: none;
 }
 
 /** <-- Hero Section --> **/
