@@ -1,32 +1,146 @@
-:root {
-  --primary-color: #407135;
-  --primary-color-hover: #2d5624;
-  --grey-300: #222222;
-}
-
 * {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
 }
 
+section {
+  margin-bottom: 64px;
+}
+:root {
+  /* Colores */
+  --primary-color: #407135;
+  --primary-color-hover: #2d5624;
+  --grey-300: #222222;
+
+  /* Sombreado */
+  --shadow-1: 0 4px 10px rgba(15, 23, 42, 0.08);
+  --shadow-2: 0 10px 25px rgba(15, 23, 42, 0.14);
+  --shadow-3: 0 18px 45px rgba(15, 23, 42, 0.18);
+
+  /* Fuentes */
+  --ff-display: "Londrina Solid", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --ff-body: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  /* Tamaños */
+  --fs-display: 64px;
+  --fs-h1: 48px;
+  --fs-h2: 40px;
+  --fs-h3: 32px;
+  --fs-h4: 28px;
+
+  --fs-subtitle-1: 24px;
+  --fs-subtitle-2: 20px;
+
+  --fs-lead: 18px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+  --fs-tiny: 12px;
+
+  /* Line-height */
+  --lh-display: 0.85; /* 85% */
+  --lh-heading: 1.2; /* 120% */
+  --lh-subtitle: 1.4; /* 140% */
+  --lh-body: 1.4; /* 140% */
+}
+
+/* Display y headings usan Londrina */
+.typ-display {
+  font-family: var(--ff-display);
+  font-size: var(--fs-display);
+  line-height: var(--lh-display);
+}
+
+.typ-h1 {
+  font-family: var(--ff-display);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-heading);
+}
+
+.typ-h2 {
+  font-family: var(--ff-display);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+}
+
+.typ-h3 {
+  font-family: var(--ff-display);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-heading);
+}
+
+.typ-h4 {
+  font-family: var(--ff-display);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-heading);
+}
+
+/* Subtítulos y texto usan Poppins */
+.typ-subtitle-1 {
+  font-family: var(--ff-body);
+  font-size: var(--fs-subtitle-1);
+  line-height: var(--lh-subtitle);
+}
+
+.typ-subtitle-2 {
+  font-family: var(--ff-body);
+  font-size: var(--fs-subtitle-2);
+  line-height: var(--lh-subtitle);
+}
+
+.typ-lead {
+  font-family: var(--ff-body);
+  font-size: var(--fs-lead);
+  line-height: var(--lh-subtitle);
+}
+
+.typ-body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+.typ-small {
+  font-family: var(--ff-body);
+  font-size: var(--fs-small);
+  line-height: var(--lh-body);
+}
+
+.typ-tiny {
+  font-family: var(--ff-body);
+  font-size: var(--fs-tiny);
+  line-height: var(--lh-body);
+}
+
+/** <!-- Body --!> **/
+body {
+  background-color: #f1f1f1;
+  color: var(--grey-300);
+}
+
 /** <-- Navigation Bar --> **/
 
 .navContainer {
   background-color: var(--primary-color);
+  width: 100%;
+  height: 71px;
+  margin: 0;
 }
 
 .navContent {
-  max-width: 1340px;        /* ancho máximo de tu grilla */
-  margin: auto;           /* centra el contenido */
-  
+  padding: 0px 40px;
+  max-width: 1420px;
+  height: 100%;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .navContent img {
-  height: 46px;            
+  height: 46px;
 }
 
 .navContent nav {
@@ -37,7 +151,7 @@
   list-style-type: none;
   display: flex;
   justify-content: center;
-  gap: 8px;                
+  gap: 8px;
 }
 
 .navContent ul li a {
@@ -51,7 +165,7 @@
   background-color: var(--primary-color-hover);
 }
 
-/* Botón lo más a la derecha posible, sigue dentro de la grilla */
+/* Botón lo más a la derecha posible*/
 .btnSecondary {
   font-family: "Poppins", sans-serif;
   color: var(--grey-300);
@@ -67,10 +181,10 @@
 
 .heroImage {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   width: 100%;
-  height: 820px;
+  height: 750px;
   background-image: linear-gradient(
       rgba(61, 105, 53, 0.5),
       rgba(61, 105, 53, 0.5)
@@ -80,16 +194,111 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  padding: 0px 40px;
 }
 
 .heroDivContainer {
+  max-width: 30%;
   color: white;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.heroTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.heroTitleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ctaContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/** <-- About Section --> **/
+
+.aboutSection {
+  margin-top: 64px;
+  max-width: 1420px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 0px 40px;
+}
+
+.divAboutLeft,
+.divAboutRight {
+  flex: 1 1 50%;
+  height: atuo;
+  min-width: 0;
+  align-items: center;
+}
+
+.divAboutRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+}
+
+.imageCard {
+  padding: 3%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: var(--shadow-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 12px;
+  transform: rotate(-4deg);
+}
+
+.imageCard img {
+  width: 100%;
+  background-color: rgb(235, 235, 235);
+
+  height: auto;
+  display: block;
+}
+
+.divAboutPostitContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.divAboutPostit {
+  background-color: #f9f0c5;
+  box-shadow: var(--shadow-2);
+  border-radius: 8px;
+  display: flex;
   text-align: center;
+  flex-direction: column;
+  height: 120px;
+  justify-content: space-between;
+  transform: rotate(4deg);
+  width: 100%;
+  padding: 32px 0px;
+  box-sizing: border-box;
 }
 
 /** <-- Buttons --> **/
 
 .btnPrimary {
+  width: fit-content;
   color: var(--grey-300);
   background-color: white;
   font-size: 18px;
@@ -103,8 +312,6 @@
   cursor: pointer;
   background-color: #dddddd;
 }
-.btnPrimary:focus {
-}
 
 .btnSecondary {
   font-family: "Poppins", sans-serif;
@@ -114,13 +321,4 @@
   font-size: 16px;
   padding: 12px 24px;
   box-shadow: 0px 0px 16px rgb(0, 0, 0, 0.3);
-}
-
-/** Typography **/
-
-h1 {
-  color: rgb(255, 255, 255);
-  line-height: 100%;
-  font-size: 80px;
-  -webkit-text-stroke: 2px black;
 }
