@@ -4,9 +4,6 @@
   padding: 0;
 }
 
-section {
-  margin-bottom: 64px;
-}
 :root {
   /* Colores */
   --primary-color: #407135;
@@ -114,19 +111,39 @@ section {
   line-height: var(--lh-body);
 }
 
-/** <!-- Body --!> **/
+/**************************************** General ****************************************/
 body {
   background-color: #f1f1f1;
   color: var(--grey-300);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/** <-- Navigation Bar --> **/
+.sectionContentContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 40px;
+  max-width: 1420px;
+}
+
+section {
+  margin-bottom: 120px;
+}
+
+/**************************************** NavBar ****************************************/
 
 .navContainer {
   background-color: var(--primary-color);
   width: 100%;
   height: 71px;
   margin: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .navContent {
@@ -165,23 +182,11 @@ body {
   background-color: var(--primary-color-hover);
 }
 
-/* Botón lo más a la derecha posible*/
-.btnSecondary {
-  font-family: "Poppins", sans-serif;
-  color: var(--grey-300);
-  background-color: white;
-  border-radius: 8px;
-  font-size: 16px;
-  padding: 12px 24px;
-  box-shadow: 0px 0px 16px rgb(0, 0, 0, 0.3);
-  border: none;
-}
-
-/** <-- Hero Section --> **/
+/**************************************** Hero ****************************************/
 
 .heroImage {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 750px;
@@ -193,12 +198,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  padding: 0px 40px;
 }
 
 .heroDivContainer {
-  max-width: 30%;
   color: white;
   text-align: left;
   width: 100%;
@@ -206,6 +208,7 @@ body {
   flex-direction: column;
   gap: 64px;
 }
+
 .heroTextContainer {
   display: flex;
   flex-direction: column;
@@ -223,79 +226,129 @@ body {
   gap: 10px;
 }
 
-/** <-- About Section --> **/
-
+/**************************************** About ****************************************/
 .aboutSection {
-  margin-top: 64px;
-  max-width: 1420px;
-  height: auto;
+  width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  gap: 40px;
-  padding: 0px 40px;
+  padding: 80px 0;
 }
 
+.sectionAboutContent {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Columnas 50 / 50 */
 .divAboutLeft,
 .divAboutRight {
-  flex: 1 1 50%;
-  height: atuo;
+  flex: 1 1 0;
   min-width: 0;
-  align-items: center;
 }
 
-.divAboutRight {
+/* Izquierda */
+.divAboutLeft {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 64px;
 }
 
 .imageCard {
+  width: 100%;
+  height: 100%;
   padding: 3%;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   box-shadow: var(--shadow-1);
+  border-radius: 12px;
+  transform: rotate(-2deg);
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  border-radius: 12px;
-  transform: rotate(-4deg);
 }
 
 .imageCard img {
   width: 100%;
-  background-color: rgb(235, 235, 235);
-
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
+}
+
+/* Derecha */
+.divAboutRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
 }
 
 .divAboutPostitContainer {
   display: flex;
+  gap: 16px;
   width: 100%;
-  flex-direction: row;
-  margin-top: 20px;
 }
 
 .divAboutPostit {
   background-color: #f9f0c5;
   box-shadow: var(--shadow-2);
-  border-radius: 8px;
   display: flex;
-  text-align: center;
   flex-direction: column;
-  height: 120px;
-  justify-content: space-between;
-  transform: rotate(4deg);
+  height: 190px;
+  padding: 42px 32px;
   width: 100%;
-  padding: 32px 0px;
+  transform: rotate(4deg);
   box-sizing: border-box;
 }
 
-/** <-- Buttons --> **/
+/**************************************** Padre Lucas ****************************************/
+
+.padreLucasSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.padreLucasContent {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.padreLucasImg {
+  transform: rotate(1deg);
+  padding: 0.5%;
+  flex: 2 1 0;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow-2);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.padreLucasImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.padreLucasTextContainer {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  align-items: flex-start;
+  gap: 24px;
+}
+/**************************************** Buttons ****************************************/
 
 .btnPrimary {
   width: fit-content;
@@ -314,11 +367,13 @@ body {
 }
 
 .btnSecondary {
+  width: fit-content;
   font-family: "Poppins", sans-serif;
   color: var(--grey-300);
   background-color: white;
   border-radius: 8px;
   font-size: 16px;
   padding: 12px 24px;
-  box-shadow: 0px 0px 16px rgb(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-1);
+  border: none;
 }
