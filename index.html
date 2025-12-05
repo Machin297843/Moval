@@ -8,8 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body>
@@ -19,10 +26,10 @@
         <img src="Assets/MovalLogo.png" alt="Moval Logo" />
         <nav>
           <ul>
-            <li><a href="#home">Nosotros</a></li>
-            <li><a href="#news">Actividades</a></li>
-            <li><a href="#contact">Instalaciones</a></li>
-            <li><a href="#about">Preguntas frecuentes</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Actividades</a></li>
+            <li><a href="#">Ubicacion</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
           </ul>
         </nav>
         <button class="btnSecondary">Contacto</button>
@@ -32,22 +39,28 @@
     <!-- Hero Section -->
     <section class="heroImage">
       <div class="sectionContentContainer">
-        <div class="heroDivContainer">
-          <div class="heroTextContainer">
-            <div class="heroTitleContainer">
-              <h1 class="typ-display heroTitle">MOVIMIENTO<br />AIRE LIBRE</h1>
-              <h2 class="typ-subtitle-2 heroSubtitle">Desde 1982</h2>
+        <div class="heroContentContainer">
+          <div class="heroContent">
+            <div class="heroTextContainer">
+              <div class="heroTitleContainer">
+                <h1 class="typ-display heroTitle">
+                  MOVIMIENTO<br />AIRE LIBRE
+                </h1>
+                <div class="heroSubtitleContainer">
+                  <h2 class="typ-subtitle-2 heroSubtitle">Desde 1982</h2>
+                </div>
+              </div>
+              <p class="typ-lead">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent vitae ligula eget ipsum elementum pulvinar.
+              </p>
             </div>
-            <p class="typ-lead heroLead">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              vitae ligula eget ipsum elementum pulvinar.
-            </p>
-          </div>
-          <div class="ctaContainer">
-            <button class="btnPrimary">Inscribirse</button>
-            <p class="typ-small heroNote">
-              Para niños y adolescentes entre 7 y 18 años
-            </p>
+            <div class="ctaContainer">
+              <button class="btnPrimary">Inscribirse</button>
+              <p class="typ-small">
+                Para niños y adolescentes entre 7 y 18 años
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -64,27 +77,38 @@
           </div>
 
           <div class="divAboutRight">
-            <h1 class="typ-h2">¿Qué es Moval?</h1>
+            <h1 class="typ-h1">¿Qué es Moval?</h1>
             <div class="divAboutPostitContainer">
               <!-- post-its -->
 
               <div class="divAboutPostitContainer">
-                <div class="divAboutPostit">
+                <div class="divAboutPostit postIt1">
                   <p>El mejor campamento</p>
-                  <p>Luquitas 23 años</p>
+                  <span>Luquitas 23 años</span>
                 </div>
-                <div class="divAboutPostit">
+                <div class="divAboutPostit postIt2">
                   <p>El mejor campamento</p>
-                  <p>Felipe 83 años</p>
+                  <span>Felipe 83 años</span>
                 </div>
-                <div class="divAboutPostit">
+                <div class="divAboutPostit postIt3">
                   <p>El mejor campamento</p>
-                  <p>Julieta xx años</p>
+                  <span>Julieta xx años</span>
                 </div>
               </div>
             </div>
             <div class="divAboutTextContainer">
-              <p>Texto lorem…</p>
+              <p class="typ-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent vitae ligula eget ipsum elementum pulvinar. Curabitur
+                non justo turpis. Sed feugiat, urna at posuere porta, libero
+                lorem aliquet nisl, in posuere nisl ipsum eu metus. Donec id
+                arcu vel velit efficitur fermentum. Vivamus sit amet erat. Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. <br />
+                <br />Praesent vitae ligula eget ipsum elementum pulvinar.
+                Curabitur non justo turpis. Sed feugiat, urna at posuere porta,
+                libero lorem aliquet nisl, in posuere nisl ipsum eu metus. Donec
+                id arcu vel velit efficitur fermentum. Vivamus sit amet erat.
+              </p>
             </div>
             <button class="btnSecondary">Leer más</button>
           </div>
@@ -96,14 +120,25 @@
       <div class="sectionContentContainer">
         <div class="padreLucasContent">
           <div class="padreLucasTextContainer">
-            <h4 class="typ-lead">Padre Lucas</h4>
-            <p>
+            <div>
+              <h1 class="typ-h1">Padre Lucas</h1>
+              <h2 class="typ-subtitle-2">1924 - 2014</h2>
+            </div>
+            <p class="typ-body">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
               vitae ligula eget ipsum elementum pulvinar. Curabitur non justo
               turpis. Sed feugiat, urna at posuere porta, libero lorem aliquet
               nisl, in posuere nisl ipsum eu metus. Donec id arcu vel velit
               efficitur fermentum. Vivamus sit amet erat.
             </p>
+            <a
+              href="https://iglesiacatolica.org.uy/la-pascua-de-fr-lucas-del-valle-op/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btnSecondary"
+            >
+              Leer más
+            </a>
           </div>
           <div class="padreLucasImg">
             <img src="Assets/PadreLucas.png" alt="Padre Lucas" />
@@ -112,36 +147,312 @@
       </div>
     </section>
 
-    <section id="ourTeamSection ">
-      <h1 class="typ-h2">¿Quienes somos?</h1>
+    <section class="ourTeamSection">
+      <div class="sectionContentContainer">
+        <h1 class="typ-h1">¿Quienes somos?</h1>
+        <div class="ourTeamCards">
+          <div class="ourTeamCard">
+            <img src="Assets/.jpg" alt="Foto de Patricia Durdos" />
+            <div class="ourTeamCardTextContainer">
+              <p class="typ-lead">Patricia Durdos</p>
+              <p class="typ-small">Descripcion</p>
+            </div>
+          </div>
+          <div class="ourTeamCard">
+            <img src="Assets/.jpg" alt="Foto de Patricia Ferreira" />
+            <div class="ourTeamCardTextContainer">
+              <p class="typ-lead">Patricia Ferreiro</p>
+              <p class="typ-small">Descripcion</p>
+            </div>
+          </div>
+          <div class="ourTeamCard">
+            <img src="Assets/.jpg" alt="Foto del equipo de monitores" />
+            <div class="ourTeamCardTextContainer">
+              <p class="typ-lead">Y un maravilloso equipo</p>
+              <p class="typ-small">
+                Un equipo de más de 20 monitores para que tu hijo explore y
+                crezca en un ambiente seguro, contenido y lleno de actividades
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="activitiesSection">
-      <h1 class="typ-h2">Nuestras actividades</h1>
+    <section class="activitiesSection">
+      <div class="sectionContentContainer">
+        <div class="sectionTitleContainer">
+          <h1 class="typ-h2">Nuestras actividades</h1>
+          <p class="typ-lead">
+            Nuestras actividades Subtitulo, algun texto habrá que poner, digo
+            yo, pienso, no se
+          </p>
+        </div>
+        <div class="activitiesGrid">
+          <div class="activitiesRow">
+            <div class="activityCard">
+              <i class="fa-solid fa-campground activityIcon"></i>
+              <div class="activityCardTextContainer">
+                <p class="typ-lead">Nombre</p>
+                <p class="body">Descripción</p>
+              </div>
+            </div>
+            <div class="activityCard">
+              <i class="fa-solid fa-campground activityIcon"></i>
+              <div class="activityCardTextContainer">
+                <p class="typ-lead">Nombre</p>
+                <p class="body">Descripción</p>
+              </div>
+            </div>
+            <div class="activityCard">
+              <i class="fa-solid fa-campground activityIcon"></i>
+              <div class="activityCardTextContainer">
+                <p class="typ-lead">Nombre</p>
+                <p class="body">Descripción</p>
+              </div>
+            </div>
+          </div>
+          <div class="activitiesRow">
+            <div class="activityCard">
+              <i class="fa-solid fa-campground activityIcon"></i>
+              <div class="activityCardTextContainer">
+                <p class="typ-lead">Nombre</p>
+                <p class="body">Descripción</p>
+              </div>
+            </div>
+            <div class="activityCard">
+              <i class="fa-solid fa-campground activityIcon"></i>
+              <div class="activityCardTextContainer">
+                <p class="typ-lead">Nombre</p>
+                <p class="body">Descripción</p>
+              </div>
+            </div>
+            <div class="activityCard">
+              <i class="fa-solid fa-campground activityIcon"></i>
+              <div class="activityCardTextContainer">
+                <p class="typ-lead">Nombre</p>
+                <p class="body">Descripción</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="bannerSection ">
+    <!-- <section id="bannerSection ">
       <h1 class="typ-h2">Banner</h1>
-    </section>
+    </section> -->
 
-    <section id="facilitiesSection ">
+    <!-- <section id="facilitiesSection ">
       <h1 class="typ-h2">Instalaciones</h1>
-    </section>
+    </section> -->
 
-    <section id="mapSection">
-      <h1 class="typ-h2">Donde estaremos</h1>
+    <section class="mapSection">
+      <div class="sectionContentContainer">
+        <div class="sectionTitleContainer">
+          <h1 class="typ-h1">Donde estaremos</h1>
+          <p class="typ-lead">
+            Tres Arroyos es nuestro lugar bla bla y acá podriamos hablar de que
+            también van los boyscouts o quien se que también vaya a este lugar y
+            quien es el dueño y quienes van a estar, si va a haber mas gente por
+            fuera del campamento y que tan lejos está de la ciudad de minas
+          </p>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.1599292777596!2d-55.28860992370649!3d-34.42269254796141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x950ab133f61982ef%3A0x19aa3127b35debdb!2sTres%20Arroyos!5e0!3m2!1ses!2suy!4v1764946775556!5m2!1ses!2suy"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        <script
+          src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""
+        ></script>
+        <a
+          href="https://maps.app.goo.gl/5JkmpMcQLWdeMYjN8"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btnSecondary"
+          >Ver en Google Maps</a
+        >
+      </div>
     </section>
 
     <section id="checklistSection">
-      <h1 class="typ-h2">¿Tenés todo listo?</h1>
+      <div class="sectionContentContainer">
+        <div class="sectionTitleContainer">
+          <h1 class="typ-h2">¿Tenés todo listo?</h1>
+          <p class="typ-lead">Armá la mochila y vení a Moval</p>
+        </div>
+        <div class="checkListSectionContent">
+          <div class="checkList">
+            <label class="checkItem">
+              <input type="checkbox" />
+              <span class="typ-body">Sobre de dormir</span>
+            </label>
+            <label class="checkItem">
+              <input type="checkbox" />
+              <span class="typ-body">Abrigo</span>
+            </label>
+            <label class="checkItem">
+              <input type="checkbox" />
+              <span class="typ-body">Sombrero</span>
+            </label>
+            <label class="checkItem">
+              <input type="checkbox" />
+              <span class="typ-body">Protector Solar y Repelente</span>
+            </label>
+            <label class="checkItem">
+              <input type="checkbox" />
+              <span class="typ-body">Artículos de higiene</span>
+            </label>
+            <label class="checkItem">
+              <input type="checkbox" />
+              <span class="typ-body">Rollo de papel higiénico</span>
+            </label>
+            <label class="checkItem">
+              <input type="checkbox" />
+              <span class="typ-body">Chancletas</span>
+            </label>
+            <label class="checkItem">
+              <input type="checkbox" />
+              <span class="typ-body">Cuerda y palillos</span>
+            </label>
+            <label class="checkItem">
+              <input type="checkbox" />
+              <span class="typ-body">2m de Nylon</span>
+            </label>
+            <label class="checkItem">
+              <input type="checkbox" />
+              <span class="typ-body">Plato, cubiertos y vaso</span>
+            </label>
+            <label class="checkItem">
+              <input type="checkbox" />
+              <span class="typ-body">Cantimplora</span>
+            </label>
+            <label class="checkItem">
+              <input type="checkbox" />
+              <span class="typ-body">Bidón de agua</span>
+            </label>
+            <label class="checkItem">
+              <input type="checkbox" />
+              <span class="typ-body">Almuerzo para el 1er día</span>
+            </label>
+          </div>
+          <div class="checkListPhotos">
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="FaqSection">
-      <h1 class="typ-h2">¿Tienes alguna pregunta?</h1>
+      <div class="sectionContentContainer">
+        <div class="sectionTitleContainer">
+          <h1 class="typ-h2">¿Tienes alguna pregunta?</h1>
+          <p class="typ-lead">Tenemos respuestas</p>
+        </div>
+        <div class="FaqContainer">
+          <div class="Faq">
+            <p class="typ-lead">¿Tiene costo?</p>
+            <p class="typ-lead">></p>
+          </div>
+          <div class="Faq">
+            <p class="typ-lead">¿Tiene costo?</p>
+            <p class="typ-lead">></p>
+          </div>
+          <div class="Faq">
+            <p class="typ-lead">¿Tiene costo?</p>
+            <p class="typ-lead">></p>
+          </div>
+          <div class="Faq">
+            <p class="typ-lead">¿Tiene costo?</p>
+            <p class="typ-lead">></p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="FooterSection">
-      <h1 class="typ-h2">Inscribite ahora y vení a Moval!</h1>
+      <div class="footerContentContainer">
+        <div class="footerTextContainer">
+          <h1 class="typ-h2">Inscribite ahora y vení a Moval!</h1>
+          <p class="typ-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+            vitae ligula eget ipsum elementum pulvinar. Curabitur non justo
+            turpis. Sed feugiat, urna at posuere porta, libero lorem aliquet
+            nisl, in posuere nisl ipsum eu metus. Donec id arcu vel velit
+            efficitur fermentum. Vivamus sit amet erat.
+          </p>
+          <button class="btnPrimary">Inscribirse</button>
+        </div>
+        <svg
+          width="1500"
+          viewBox="0 0 1920 714"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_125_583)">
+            <circle
+              cx="957.5"
+              cy="406"
+              r="140"
+              fill="url(#paint0_radial_125_583)"
+            />
+            <path
+              d="M707.954 377.588L653.511 343.748C640.439 335.624 624.562 333.348 609.734 337.473L500.828 367.773C492.718 370.03 484.197 370.395 475.924 368.839L420.188 358.36C405.382 355.576 390.082 358.988 377.861 367.798L355.144 384.176C340.912 394.436 322.639 397.291 305.956 391.86L260.412 377.034C248.802 373.255 236.264 373.446 224.775 377.578L194.506 388.464C185.334 391.762 175.449 392.564 165.865 390.787L113.149 381.011C107.747 380.009 102.225 379.823 96.7673 380.457L33.0788 387.864C27.1228 388.557 21.0884 387.734 15.5352 385.473C-7.88159 375.935 -33.5 393.163 -33.5 418.447V659.5C-33.5 689.875 -8.87566 714.5 21.5 714.5H1878.5C1908.88 714.5 1933.5 689.875 1933.5 659.5V424.607C1933.5 395.571 1905 375.103 1877.49 384.375C1867.82 387.633 1857.3 387.301 1847.86 383.439L1821.35 372.598C1810.1 367.996 1797.64 367.252 1785.92 370.481L1734.39 384.68C1724.34 387.45 1713.7 387.305 1703.73 384.263L1613.72 356.807C1602.25 353.308 1589.95 353.654 1578.7 357.792L1498.52 387.269C1494.62 388.702 1490.57 389.69 1486.44 390.211L1411.65 399.678C1402.33 400.857 1392.86 399.629 1384.15 396.11L1289.13 357.732C1275.6 352.267 1260.45 352.403 1247.03 358.109L1214.83 371.788C1202.38 377.077 1188.42 377.594 1175.62 373.24L1135.4 359.567C1125.66 356.256 1115.19 355.742 1105.18 358.083L872.731 412.421C858.795 415.678 844.139 413.376 831.874 406.003L783.404 376.865C771.822 369.903 757.297 370.096 745.905 377.365C734.352 384.736 719.594 384.823 707.954 377.588Z"
+              fill="#365A12"
+            />
+            <path
+              d="M683.138 440.42L574.775 387.982C559.385 380.534 541.406 380.667 526.127 388.343L496.48 403.237C490.218 406.383 483.412 408.304 476.428 408.895L343.751 420.125C333.145 421.022 323.028 424.978 314.626 431.512L309.901 435.186C297.555 444.787 281.706 448.678 266.318 445.885L143.219 423.549C138.099 422.62 132.873 422.422 127.698 422.962L36.0133 432.518C25.4222 433.621 15.0046 429.218 8.41561 420.853C-9.81013 397.715 -47 410.603 -47 440.057V634.5C-47 664.876 -22.3757 689.5 8 689.5H1912.5C1942.88 689.5 1967.5 664.876 1967.5 634.5V476.943C1967.5 433.422 1919.35 407.142 1882.75 430.687L1842.2 456.77C1830.11 464.547 1815.45 467.282 1801.37 464.389L1427.28 387.536C1417.6 385.549 1407.57 386.203 1398.24 389.429L1268.11 434.413C1256.69 438.361 1244.29 438.438 1232.82 434.632L1158.35 409.921C1145.87 405.778 1132.31 406.247 1120.14 411.243L1083.47 426.298C1070.93 431.444 1056.94 431.782 1044.17 427.244L1041.24 426.205C1032.55 423.118 1023.23 422.265 1014.12 423.725L969.449 430.887C955.799 433.076 941.824 430.043 930.309 422.393L903.483 404.572C889.244 395.113 871.416 392.813 855.242 398.347L724.903 442.949C711.191 447.641 696.183 446.732 683.138 440.42Z"
+              fill="#20350B"
+            />
+            <path
+              d="M1798.23 497.805C1763.24 483.694 1718.61 466.371 1702.68 460.851C1698.75 459.488 1694.8 459.812 1690.9 461.27L1617.93 488.54C1610.08 491.474 1601.66 492.576 1593.32 491.759L1443.41 477.087C1436.53 476.414 1429.59 477.043 1422.94 478.942L1336.66 503.597C1324.74 507.003 1312.02 506.282 1300.56 501.553L1226.32 470.913C1212.28 465.116 1196.46 465.387 1182.63 471.661L1022.92 544.076C1012.5 548.803 1000.86 550.159 989.623 547.956L848.825 520.335C840.029 518.61 830.946 519.06 822.364 521.647L786.963 532.317C774.981 535.929 762.125 535.346 750.518 530.665L634.328 483.804C621.963 478.817 608.208 478.492 595.621 482.888L458.104 530.916C448.143 534.395 437.392 534.936 427.132 532.473L346.784 513.186C339.372 511.407 331.671 511.188 324.169 512.543L193.92 536.071C187.237 537.278 180.388 537.237 173.72 535.95L11.4228 504.626C-22.5075 498.078 -54 524.073 -54 558.63V776C-54 806.376 -29.3757 831 0.999966 831H1905C1935.38 831 1960 806.376 1960 776V528.573C1960 490.673 1917.63 468.192 1886.24 489.441C1863.64 504.748 1823.55 508.018 1798.23 497.805Z"
+              fill="#111F04"
+            />
+            <ellipse
+              cx="957"
+              cy="357.07"
+              rx="670"
+              ry="280"
+              fill="url(#paint1_radial_125_583)"
+              fill-opacity="0.37"
+            />
+          </g>
+          <defs>
+            <radialGradient
+              id="paint0_radial_125_583"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(957.5 406) rotate(-90) scale(140)"
+            >
+              <stop stop-color="#E5B24C" />
+              <stop offset="1" stop-color="#FCCE71" />
+            </radialGradient>
+            <radialGradient
+              id="paint1_radial_125_583"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(957 357.07) rotate(90) scale(280 670)"
+            >
+              <stop stop-color="#E7CA53" />
+              <stop offset="1" stop-color="#E7CA53" stop-opacity="0" />
+            </radialGradient>
+            <clipPath id="clip0_125_583">
+              <rect width="1920" height="714" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
     </section>
   </body>
 </html>

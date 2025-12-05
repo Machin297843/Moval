@@ -8,7 +8,7 @@
   /* Colores */
   --primary-color: #407135;
   --primary-color-hover: #2d5624;
-  --grey-300: #222222;
+  --grey-300: #111;
 
   /* Sombreado */
   --shadow-1: 0 4px 10px rgba(15, 23, 42, 0.08);
@@ -16,13 +16,11 @@
   --shadow-3: 0 18px 45px rgba(15, 23, 42, 0.18);
 
   /* Fuentes */
-  --ff-display: "Londrina Solid", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
-  --ff-body: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+  --ff-display: "Londrina Solid", sans-serif;
+  --ff-body: "Poppins", sans-serif;
 
   /* Tamaños */
-  --fs-display: 64px;
+  --fs-display: 74px;
   --fs-h1: 48px;
   --fs-h2: 40px;
   --fs-h3: 32px;
@@ -48,33 +46,37 @@
   font-family: var(--ff-display);
   font-size: var(--fs-display);
   line-height: var(--lh-display);
+  text-shadow: 0px 5px 0px var(--grey-300);
+  font-weight: 500;
 }
-
 .typ-h1 {
   font-family: var(--ff-display);
   font-size: var(--fs-h1);
   line-height: var(--lh-heading);
+  font-weight: 500;
 }
 
 .typ-h2 {
   font-family: var(--ff-display);
   font-size: var(--fs-h2);
   line-height: var(--lh-heading);
+  font-weight: 500;
 }
 
 .typ-h3 {
   font-family: var(--ff-display);
   font-size: var(--fs-h3);
   line-height: var(--lh-heading);
+  font-weight: 500;
 }
 
 .typ-h4 {
   font-family: var(--ff-display);
   font-size: var(--fs-h4);
   line-height: var(--lh-heading);
+  font-weight: 500;
 }
 
-/* Subtítulos y texto usan Poppins */
 .typ-subtitle-1 {
   font-family: var(--ff-body);
   font-size: var(--fs-subtitle-1);
@@ -111,7 +113,8 @@
   line-height: var(--lh-body);
 }
 
-/**************************************** General ****************************************/
+/**************************************** General Styles ****************************************/
+
 body {
   background-color: #f1f1f1;
   color: var(--grey-300);
@@ -129,10 +132,61 @@ body {
   justify-content: center;
   padding: 0px 40px;
   max-width: 1420px;
+  gap: 60px;
+  flex-direction: column;
 }
 
 section {
   margin-bottom: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sectionTitleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+/**************************************** Buttons ****************************************/
+
+.btnPrimary {
+  font-family: var(--ff-display);
+  font-size: 20px;
+  font-weight: 400;
+  width: 277px;
+  color: var(--grey-300);
+  background-color: white;
+  padding: 12px 54px;
+  border-radius: 8px;
+  border: solid 2px var(--grey-300);
+  box-shadow: 0px 6px var(--grey-300);
+}
+
+.btnPrimary:hover {
+  cursor: pointer;
+  background-color: #e9e9e9;
+}
+
+.btnSecondary {
+  width: fit-content;
+  font-family: "Poppins", sans-serif;
+  color: var(--grey-300);
+  background-color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 12px 24px;
+  box-shadow: var(--shadow-1);
+  border: none;
+  text-decoration: none;
+}
+
+.btnSecondary:hover {
+  cursor: pointer;
+  box-shadow: var(--shadow-2);
+  background-color: #ddd;
 }
 
 /**************************************** NavBar ****************************************/
@@ -147,13 +201,14 @@ section {
 }
 
 .navContent {
-  padding: 0px 40px;
-  max-width: 1420px;
+  width: 100%;
   height: 100%;
-  margin: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 0px 40px;
+  max-width: 1420px;
+  gap: 60px;
 }
 
 .navContent img {
@@ -176,6 +231,7 @@ section {
   color: white;
   padding: 14px 16px;
   text-decoration: none;
+  border-radius: 4px;
 }
 
 .navContent ul li a:hover {
@@ -200,13 +256,20 @@ section {
   background-size: cover;
 }
 
-.heroDivContainer {
+.heroContentContainer {
+  display: flex;
   color: white;
   text-align: left;
   width: 100%;
   display: flex;
-  flex-direction: column;
   gap: 64px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  flex: 0.3;
+  gap: 48px;
 }
 
 .heroTextContainer {
@@ -214,25 +277,45 @@ section {
   flex-direction: column;
   gap: 32px;
 }
+
 .heroTitleContainer {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
+}
+
+.heroSubtitleContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.heroSubtitle {
+  color: #fff;
+  font-size: var(--fs-subtitle-1);
+  text-shadow: 0px 2px 0px var(--grey-300);
+  font-weight: 400;
+}
+
+/* líneas izquierda y derecha */
+.heroSubtitleContainer::before,
+.heroSubtitleContainer::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 60px;
+  border-radius: 999px;
+  background-color: #fff;
+  box-shadow: 0px 2px 0px #1b1b1b;
 }
 
 .ctaContainer {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 /**************************************** About ****************************************/
-.aboutSection {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 80px 0;
-}
 
 .sectionAboutContent {
   display: flex;
@@ -256,12 +339,12 @@ section {
 
 .imageCard {
   width: 100%;
-  height: 100%;
-  padding: 3%;
+  height: 700px;
+  padding: 16px;
   background-color: #fff;
   box-shadow: var(--shadow-1);
   border-radius: 12px;
-  transform: rotate(-2deg);
+  transform: rotate(-1.3deg);
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -275,7 +358,6 @@ section {
   display: block;
 }
 
-/* Derecha */
 .divAboutRight {
   display: flex;
   flex-direction: column;
@@ -293,25 +375,39 @@ section {
 }
 
 .divAboutPostit {
-  background-color: #f9f0c5;
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-1);
   display: flex;
+  gap: 42px;
   flex-direction: column;
-  height: 190px;
   padding: 42px 32px;
   width: 100%;
-  transform: rotate(4deg);
-  box-sizing: border-box;
+}
+
+.divAboutPostit p {
+  font-size: 20px;
+  font-family: var(--ff-display);
+  font-weight: 300;
+}
+
+.divAboutPostit span {
+  font-size: 16px;
+  font-family: var(--ff-display);
+  font-weight: 300;
+}
+.postIt1 {
+  background-color: #87cddc;
+  transform: rotate(-4deg);
+}
+.postIt2 {
+  transform: rotate(2deg);
+  background-color: #eee8a2;
+}
+.postIt3 {
+  background-color: #e0b4e8;
+  transform: rotate(3deg);
 }
 
 /**************************************** Padre Lucas ****************************************/
-
-.padreLucasSection {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 80px 0;
-}
 
 .padreLucasContent {
   display: flex;
@@ -321,8 +417,7 @@ section {
 }
 
 .padreLucasImg {
-  transform: rotate(1deg);
-  padding: 0.5%;
+  padding: 16px;
   flex: 2 1 0;
   max-width: 100%;
   border-radius: 12px;
@@ -348,32 +443,220 @@ section {
   align-items: flex-start;
   gap: 24px;
 }
-/**************************************** Buttons ****************************************/
 
-.btnPrimary {
-  width: fit-content;
-  color: var(--grey-300);
-  background-color: white;
-  font-size: 18px;
-  padding: 12px 54px;
-  border-radius: 8px;
-  border: solid 2px var(--grey-300);
-  box-shadow: 0px 6px var(--grey-300);
+/**************************************** Our Team ****************************************/
+
+.ourTeamCards {
+  width: 100%;
+  display: flex;
+  gap: 40px;
 }
 
-.btnPrimary:hover {
-  cursor: pointer;
-  background-color: #dddddd;
-}
-
-.btnSecondary {
-  width: fit-content;
-  font-family: "Poppins", sans-serif;
-  color: var(--grey-300);
-  background-color: white;
-  border-radius: 8px;
-  font-size: 16px;
-  padding: 12px 24px;
+.ourTeamCard {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
   box-shadow: var(--shadow-1);
-  border: none;
+  gap: 24px;
+}
+
+.ourTeamCardTextContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 12px;
+}
+.ourTeamCard img {
+  border-radius: 8px;
+  height: 340px;
+  width: 100%;
+  background-color: rgb(194, 194, 194);
+}
+
+/**************************************** Activities ****************************************/
+
+.activitiesGrid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.activitiesRow {
+  display: flex;
+  gap: 40px;
+}
+
+.activityCard {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+  background-color: white;
+  box-shadow: var(--shadow-1);
+  border-radius: 12px;
+  width: 100%;
+}
+.activityIcon {
+  font-size: 80px;
+  color: var(--primary-color);
+}
+
+/**************************************** Map ****************************************/
+
+iframe {
+  box-sizing: border-box;
+  padding: 16px;
+  width: 100%;
+  height: 550px;
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: var(--shadow-2);
+}
+
+/**************************************** CheckList ****************************************/
+
+.checkListSectionContent {
+  display: flex;
+  width: 100%;
+}
+
+.checkList {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+}
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  cursor: pointer;
+}
+
+.checkItem span {
+  font-family: var(--ff-display);
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.checkItem input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 24px;
+  height: 24px;
+  border: 4px solid #000;
+  background: #fff;
+
+  display: grid;
+  place-content: center;
+
+  cursor: pointer;
+  transform: rotate(var(--rot));
+}
+
+.checkItem:nth-child(5n + 1) {
+  --rot: -4deg;
+}
+.checkItem:nth-child(5n + 2) {
+  --rot: 2.5deg;
+}
+.checkItem:nth-child(5n + 3) {
+  --rot: -1.5deg;
+}
+.checkItem:nth-child(5n + 4) {
+  --rot: 4deg;
+}
+.checkItem:nth-child(5n + 5) {
+  --rot: 0.8deg;
+}
+
+.checkItem input[type="checkbox"]::after {
+  content: "";
+  display: block;
+
+  width: 12px;
+  height: 6px;
+
+  border-left: 4px solid #000;
+  border-bottom: 4px solid #000;
+
+  transform: rotate(-45deg) scale(0);
+  transform-origin: center;
+
+  transition: transform 0.1s ease;
+}
+
+.checkItem input[type="checkbox"]:checked::after {
+  transform: rotate(-45deg) scale(1);
+}
+
+/* opcional: estilo cuando está marcado */
+.checkItem input:checked + span {
+  text-decoration: line-through;
+  opacity: 0.65;
+}
+
+.checkListPhotos {
+  flex: 2 1 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/**************************************** FAQ ****************************************/
+
+.FaqContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  align-items: center;
+}
+.Faq {
+  width: 75%;
+  padding: 14px 16px;
+  border: solid 2px var(--grey-300);
+  box-shadow: 0px 3px var(--grey-300);
+  background-color: white;
+  display: flex;
+  border-radius: 12px;
+  justify-content: space-between;
+}
+
+.Faq:hover {
+  cursor: pointer;
+}
+
+/**************************************** Footer ****************************************/
+
+#FooterSection {
+  margin: 0;
+}
+
+.footerContentContainer {
+  background-image: linear-gradient(
+    rgba(241, 241, 241, 1),
+    rgba(255, 205, 161, 1)
+  );
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 40px;
+  max-width: 1420px;
+  gap: -250px;
+  flex-direction: column;
+}
+.footerTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: center;
+  align-items: center;
+  max-width: 75%;
 }
