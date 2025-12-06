@@ -39,30 +39,35 @@
         />
       </svg>
     </div>
-    <!-- Nav Section -->
-    <section class="navContainer">
-      <div class="navContent">
-        <nav>
-          <ul class="sidebar">
-            <li><img src="Assets/MovalLogo.png" alt="Moval Logo" /></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Actividades</a></li>
-            <li><a href="#">Ubicacion</a></li>
-            <li><a href="#">Preguntas frecuentes</a></li>
-          </ul>
-          <ul>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Actividades</a></li>
-            <li><a href="#">Ubicacion</a></li>
-            <li><a href="#">Preguntas frecuentes</a></li>
-            <li>
-              <i class="fa-solid fa-bars"></i>
-            </li>
-          </ul>
-        </nav>
-        <button class="btnSecondary">Contacto</button>
-      </div>
-    </section>
+    <nav>
+      <ul class="sidebar">
+        <li  onClick=hideSidebar() >
+          <a href="#"><i class="fa-solid fa-xmark"></a></i>
+        </li>
+        <li>
+          <a href="#" class="typ-body">Nosotros</a>
+        </li>
+        <li><a href="#" class="typ-body">Actividades</a></li>
+        <li><a href="#" class="typ-body">Ubicacion</a></li>
+        <li><a href="#" class="typ-body">Preguntas frecuentes</a></li>
+        <li>
+          <button class="btnSecondary">Contacto</button>
+        </li>
+      </ul>
+      <ul>
+        <li><img src="Assets/MovalLogo.png" alt="Moval Logo" /></li>
+        <li class="hideOnMobile" class="typ-body"><a href="#">Nosotros</a></li>
+        <li class="hideOnMobile" class="typ-body"><a href="#">Actividades</a></li>
+        <li class="hideOnMobile" class="typ-body"><a href="#">Ubicacion</a></li>
+        <li class="hideOnMobile" class="typ-body"><a href="#">Preguntas frecuentes</a></li>
+        <li class="hideOnMobile">
+          <button class="btnSecondary">Contacto</button>
+        </li>
+        <li class="menu-button" onClick=showSidebar() >
+          <a href="#"><i class="fa-solid fa-bars"></a></i>
+        </li>
+      </ul>
+    </nav>
 
     <!-- Hero Section -->
     <section class="heroImage">
@@ -499,5 +504,6 @@
         </svg>
       </div>
     </section>
+    <script src="index.js"></script>
   </body>
 </html>

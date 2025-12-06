@@ -126,10 +126,7 @@
 body {
   background-color: #f1f1f1;
   color: var(--grey-300);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
 }
 
 .sectionContentContainer {
@@ -212,52 +209,44 @@ section {
 
 /**************************************** NavBar ****************************************/
 
-.navContainer {
+nav {
   background-color: var(--primary-color);
-  width: 100%;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
+  box-shadow: var(--shadow-m1);
 }
-
-.navContent {
-  width: 100%;
+nav ul {
+  box-sizing: border-box;
+  padding: 6px 40px;
+  margin: auto;
+  max-width: 1500px;
+  display: flex;
+  list-style: none;
+}
+nav a {
   height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0px 40px;
-  max-width: 1420px;
-  gap: 60px;
-}
-
-.navContent img {
-  height: 46px;
-}
-
-.navContent nav {
-  flex: 1;
-}
-
-.navContent ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-}
-
-.navContent ul li a {
-  display: block;
-  color: white;
-  padding: 14px 18px;
-  text-decoration: none;
   border-radius: 2px;
+  color: white;
 }
 
-.navContent ul li a:hover {
+nav a:hover {
   background-color: var(--primary-color-hover);
 }
 
+nav li:first-child {
+  margin-right: auto;
+}
+nav li:last-child {
+  margin-left: auto;
+}
+
+.fa-xmark,
+.fa-bars {
+  color: white;
+  font-size: 24px;
+}
 .sidebar {
   position: fixed;
   top: 0;
@@ -265,21 +254,50 @@ section {
   height: 100vh;
   width: 250px;
   z-index: 999;
-  background-color: rgb(56, 121, 50);
-  box-shadow: var(--shadow-m1);
-  display: flex;
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow-m5);
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  display: none;
+  padding: 0;
 }
 
 .sidebar li {
+  text-align: left;
   width: 100%;
 }
 
 .sidebar a {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 15px 30px;
   width: 100%;
 }
+.sidebar li:last-child {
+  display: none;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media (max-width: 967px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
 /**************************************** Hero ****************************************/
 
 .heroImage {
