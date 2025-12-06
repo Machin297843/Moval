@@ -10,10 +10,17 @@
   --primary-color-hover: #2d5624;
   --grey-300: #111;
 
-  /* Sombreado */
-  --shadow-1: 0 4px 10px rgba(15, 23, 42, 0.08);
-  --shadow-2: 0 10px 25px rgba(15, 23, 42, 0.14);
-  --shadow-3: 0 18px 45px rgba(15, 23, 42, 0.18);
+  /* Shadows */
+  --shadow-m1: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --shadow-m2: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+  --shadow-m3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  --shadow-m4: 0px 6px 10px 4px rgba(0, 0, 0, 0.15),
+    0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+  --shadow-m5: 0px 8px 12px 6px rgba(0, 0, 0, 0.15),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.3);
 
   /* Fuentes */
   --ff-display: "Londrina Solid", sans-serif;
@@ -81,6 +88,7 @@
   font-family: var(--ff-body);
   font-size: var(--fs-subtitle-1);
   line-height: var(--lh-subtitle);
+  font-weight: 500;
 }
 
 .typ-subtitle-2 {
@@ -153,21 +161,33 @@ section {
 /**************************************** Buttons ****************************************/
 
 .btnPrimary {
+  box-sizing: border-box;
   font-family: var(--ff-display);
   font-size: 20px;
   font-weight: 400;
   width: 277px;
+  text-decoration: none;
   color: var(--grey-300);
   background-color: white;
   padding: 12px 54px;
-  border-radius: 8px;
+  border-radius: 12px;
   border: solid 2px var(--grey-300);
   box-shadow: 0px 6px var(--grey-300);
+  text-align: center;
+  z-index: 1;
 }
 
 .btnPrimary:hover {
   cursor: pointer;
-  background-color: #e9e9e9;
+  background-color: #d3d3d3;
+}
+
+.btnPrimary:active {
+  transform: translateY(6px);
+  box-shadow: none;
+  border: solid 2px white;
+  color: white;
+  background-color: rgb(12, 41, 25);
 }
 
 .btnSecondary {
@@ -178,15 +198,16 @@ section {
   border-radius: 8px;
   font-size: 16px;
   padding: 12px 24px;
-  box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-m1);
   border: none;
   text-decoration: none;
+  transition: transform 0.15s ease;
 }
 
 .btnSecondary:hover {
+  transform: translateY(-2px);
   cursor: pointer;
-  box-shadow: var(--shadow-2);
-  background-color: #ddd;
+  box-shadow: var(--shadow-m2);
 }
 
 /**************************************** NavBar ****************************************/
@@ -194,10 +215,10 @@ section {
 .navContainer {
   background-color: var(--primary-color);
   width: 100%;
-  height: 71px;
   margin: 0;
   align-items: center;
   justify-content: center;
+  padding: 0.5rem;
 }
 
 .navContent {
@@ -223,21 +244,42 @@ section {
   list-style-type: none;
   display: flex;
   justify-content: center;
-  gap: 8px;
 }
 
 .navContent ul li a {
   display: block;
   color: white;
-  padding: 14px 16px;
+  padding: 14px 18px;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 .navContent ul li a:hover {
   background-color: var(--primary-color-hover);
 }
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgb(56, 121, 50);
+  box-shadow: var(--shadow-m1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+}
 /**************************************** Hero ****************************************/
 
 .heroImage {
@@ -342,7 +384,7 @@ section {
   height: 700px;
   padding: 16px;
   background-color: #fff;
-  box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-m1);
   border-radius: 12px;
   transform: rotate(-1.3deg);
   overflow: hidden;
@@ -375,7 +417,7 @@ section {
 }
 
 .divAboutPostit {
-  box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-m1);
   display: flex;
   gap: 42px;
   flex-direction: column;
@@ -421,7 +463,7 @@ section {
   flex: 2 1 0;
   max-width: 100%;
   border-radius: 12px;
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-m2);
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -460,7 +502,7 @@ section {
   width: 100%;
   background-color: rgb(255, 255, 255);
   border-radius: 12px;
-  box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-m1);
   gap: 24px;
 }
 
@@ -498,7 +540,7 @@ section {
   gap: 24px;
   text-align: center;
   background-color: white;
-  box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-m1);
   border-radius: 12px;
   width: 100%;
 }
@@ -506,7 +548,31 @@ section {
   font-size: 80px;
   color: var(--primary-color);
 }
+.activityCardTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#WhatsappButton {
+  position: fixed;
+  right: 10%;
+  bottom: 10%;
 
+  z-index: 9999;
+  cursor: pointer;
+
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2));
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+#WhatsappButton:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.25));
+}
+
+#WhatsappButton:active {
+  transform: translateY(1px);
+}
 /**************************************** Map ****************************************/
 
 iframe {
@@ -516,7 +582,7 @@ iframe {
   height: 550px;
   background-color: white;
   border-radius: 24px;
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-m2);
 }
 
 /**************************************** CheckList ****************************************/
@@ -643,10 +709,9 @@ iframe {
     rgba(255, 205, 161, 1)
   );
   width: 100%;
-  height: 100%;
+  height: 840px;
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: 0px 40px;
   max-width: 1420px;
   gap: -250px;
@@ -659,4 +724,82 @@ iframe {
   text-align: center;
   align-items: center;
   max-width: 75%;
+}
+
+svg {
+  bottom: 10%;
+  position: relative;
+}
+
+/**************************************** Form ****************************************/
+#formBody {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.listaDeCosasALlevar,
+.fichaDelAcampante {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px 40px;
+}
+
+.sectionCardStyleContainer {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 40px 75px;
+  max-width: 1420px;
+  gap: 60px;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: var(--shadow-m2);
+}
+
+.itemsListContainer {
+  width: 100%;
+  display: flex;
+  gap: 128px;
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.costo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 40px 0px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.formLine {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.formLine input {
+  padding: 16px 24px;
+  flex: 1;
+  box-shadow: var(--shadow-m1);
+  border: none;
+  font-family: var(--ff-body);
+}
+
+.formLine input ::placeholder {
+}
+.formLine p {
+  margin: auto;
+  height: fit-content;
+  flex: 0.4;
 }

@@ -20,16 +20,44 @@
     />
   </head>
   <body>
+    <div class="sectionContentContainer">
+      <svg
+        id="WhatsappButton"
+        width="67"
+        height="68"
+        viewBox="0 0 67 68"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M67 34C67 52.7777 52.0015 68 33.5 68C14.9985 68 0 52.7777 0 34C0 15.2223 14.9985 0 33.5 0C52.0015 0 67 15.2223 67 34Z"
+          fill="#53C95B"
+        />
+        <path
+          d="M47.8924 19.7044C51.5279 23.3398 53.7784 28.1006 53.7784 33.2941C53.7784 43.8543 44.9494 52.5102 34.3026 52.5102C31.1 52.5102 27.9838 51.6446 25.1274 50.1731L15 52.7699L17.6833 42.8156C16.0387 39.9592 15.0866 36.6699 15.0866 33.2076C15.0866 22.6474 23.7425 13.9915 34.3026 13.9915C39.4962 13.9915 44.3435 16.0689 47.8924 19.7044ZM34.3026 49.221C43.1317 49.221 50.4892 42.0366 50.4892 33.2941C50.4892 28.9662 48.6714 24.9845 45.6419 21.9549C42.6123 18.9253 38.6306 17.2807 34.3892 17.2807C25.5602 17.2807 18.3758 24.4651 18.3758 33.2076C18.3758 36.2371 19.2414 39.1801 20.7994 41.7769L21.2322 42.3828L19.5876 48.2688L25.6468 46.6242L26.1661 46.9704C28.6763 48.4419 31.4462 49.221 34.3026 49.221ZM43.1317 37.2758C43.5645 37.5355 43.9107 37.6221 43.9972 37.8817C44.1704 38.0549 44.1704 39.007 43.7376 40.1323C43.3048 41.2575 41.4005 42.2963 40.5349 42.3828C38.9768 42.6425 37.765 42.5559 34.7354 41.171C29.8881 39.0936 26.772 34.2463 26.5123 33.9866C26.2527 33.6404 24.608 31.3898 24.608 28.9662C24.608 26.6291 25.8199 25.5038 26.2527 24.9845C26.6855 24.4651 27.2048 24.3785 27.551 24.3785C27.8107 24.3785 28.157 24.3785 28.4166 24.3785C28.7629 24.3785 29.1091 24.292 29.5419 25.2441C29.8881 26.1963 30.9268 28.5334 31.0134 28.7931C31.1 29.0527 31.1865 29.3124 31.0134 29.6586C30.1478 31.4764 29.1091 31.3898 29.6285 32.2554C31.5328 35.4581 33.3505 36.5834 36.2069 37.9683C36.6397 38.228 36.8994 38.1414 37.2457 37.8817C37.5053 37.5355 38.4575 36.4102 38.7172 35.9775C39.0634 35.4581 39.4096 35.5447 39.8424 35.7178C40.2752 35.8909 42.6123 37.0162 43.1317 37.2758Z"
+          fill="white"
+        />
+      </svg>
+    </div>
     <!-- Nav Section -->
     <section class="navContainer">
       <div class="navContent">
-        <img src="Assets/MovalLogo.png" alt="Moval Logo" />
         <nav>
+          <ul class="sidebar">
+            <li><img src="Assets/MovalLogo.png" alt="Moval Logo" /></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Actividades</a></li>
+            <li><a href="#">Ubicacion</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
+          </ul>
           <ul>
             <li><a href="#">Nosotros</a></li>
             <li><a href="#">Actividades</a></li>
             <li><a href="#">Ubicacion</a></li>
             <li><a href="#">Preguntas frecuentes</a></li>
+            <li>
+              <i class="fa-solid fa-bars"></i>
+            </li>
           </ul>
         </nav>
         <button class="btnSecondary">Contacto</button>
@@ -56,7 +84,7 @@
               </p>
             </div>
             <div class="ctaContainer">
-              <button class="btnPrimary">Inscribirse</button>
+              <a href="form" class="btnPrimary">Inscribirse</a>
               <p class="typ-small">
                 Para niños y adolescentes entre 7 y 18 años
               </p>
@@ -152,21 +180,24 @@
         <h1 class="typ-h1">¿Quienes somos?</h1>
         <div class="ourTeamCards">
           <div class="ourTeamCard">
-            <img src="Assets/.jpg" alt="Foto de Patricia Durdos" />
+            <img src="Assets/MovalLogo.png" alt="Foto de Patricia Durdos" />
             <div class="ourTeamCardTextContainer">
               <p class="typ-lead">Patricia Durdos</p>
               <p class="typ-small">Descripcion</p>
             </div>
           </div>
           <div class="ourTeamCard">
-            <img src="Assets/.jpg" alt="Foto de Patricia Ferreira" />
+            <img src="Assets/MovalLogo.png" alt="Foto de Patricia Ferreira" />
             <div class="ourTeamCardTextContainer">
               <p class="typ-lead">Patricia Ferreiro</p>
               <p class="typ-small">Descripcion</p>
             </div>
           </div>
           <div class="ourTeamCard">
-            <img src="Assets/.jpg" alt="Foto del equipo de monitores" />
+            <img
+              src="Assets/MovalLogo.png"
+              alt="Foto del equipo de monitores"
+            />
             <div class="ourTeamCardTextContainer">
               <p class="typ-lead">Y un maravilloso equipo</p>
               <p class="typ-small">
@@ -191,47 +222,53 @@
         <div class="activitiesGrid">
           <div class="activitiesRow">
             <div class="activityCard">
-              <i class="fa-solid fa-campground activityIcon"></i>
+              <i class="fa-solid fa-fire activityIcon"></i>
               <div class="activityCardTextContainer">
-                <p class="typ-lead">Nombre</p>
+                <p class="typ-lead">Fogatas</p>
+                <p class="body">
+                  Fuego y danzas siempre nos acompañan para alegrar nuestras
+                  noches.
+                </p>
+              </div>
+            </div>
+            <div class="activityCard">
+              <i class="fa-solid fa-guitar activityIcon"></i>
+              <div class="activityCardTextContainer">
+                <p class="typ-lead">Múisca</p>
                 <p class="body">Descripción</p>
               </div>
             </div>
             <div class="activityCard">
-              <i class="fa-solid fa-campground activityIcon"></i>
+              <i class="fa-solid fa-book-open activityIcon"></i>
               <div class="activityCardTextContainer">
-                <p class="typ-lead">Nombre</p>
-                <p class="body">Descripción</p>
-              </div>
-            </div>
-            <div class="activityCard">
-              <i class="fa-solid fa-campground activityIcon"></i>
-              <div class="activityCardTextContainer">
-                <p class="typ-lead">Nombre</p>
-                <p class="body">Descripción</p>
+                <p class="typ-lead">Reflexión</p>
+                <p class="body">Moval es un espacio para explorar emociones</p>
               </div>
             </div>
           </div>
           <div class="activitiesRow">
             <div class="activityCard">
-              <i class="fa-solid fa-campground activityIcon"></i>
+              <i class="fa-solid fa-moon activityIcon"></i>
               <div class="activityCardTextContainer">
-                <p class="typ-lead">Nombre</p>
+                <p class="typ-lead">Juegos Nocturnos</p>
                 <p class="body">Descripción</p>
               </div>
             </div>
             <div class="activityCard">
-              <i class="fa-solid fa-campground activityIcon"></i>
+              <i class="fa-solid fa-kitchen-set activityIcon"></i>
               <div class="activityCardTextContainer">
-                <p class="typ-lead">Nombre</p>
+                <p class="typ-lead">Cocina</p>
                 <p class="body">Descripción</p>
               </div>
             </div>
             <div class="activityCard">
-              <i class="fa-solid fa-campground activityIcon"></i>
+              <i class="fa-solid fa-person-hiking activityIcon"></i>
               <div class="activityCardTextContainer">
-                <p class="typ-lead">Nombre</p>
-                <p class="body">Descripción</p>
+                <p class="typ-lead">Caminatas</p>
+                <p class="body">
+                  Emprendemos diversas caminatas para descubrir la belleza del
+                  campo y los cerros
+                </p>
               </div>
             </div>
           </div>
@@ -358,20 +395,28 @@
         </div>
         <div class="FaqContainer">
           <div class="Faq">
-            <p class="typ-lead">¿Tiene costo?</p>
-            <p class="typ-lead">></p>
+            <p class="typ-lead">Pregunta #1</p>
+            <p class="typ-lead">
+              <i class="fa-solid fa-chevron-down"></i>
+            </p>
           </div>
           <div class="Faq">
-            <p class="typ-lead">¿Tiene costo?</p>
-            <p class="typ-lead">></p>
+            <p class="typ-lead">Pregunta #2</p>
+            <p class="typ-lead">
+              <i class="fa-solid fa-chevron-down"></i>
+            </p>
           </div>
           <div class="Faq">
-            <p class="typ-lead">¿Tiene costo?</p>
-            <p class="typ-lead">></p>
+            <p class="typ-lead">Pregunta #3</p>
+            <p class="typ-lead">
+              <i class="fa-solid fa-chevron-down"></i>
+            </p>
           </div>
           <div class="Faq">
-            <p class="typ-lead">¿Tiene costo?</p>
-            <p class="typ-lead">></p>
+            <p class="typ-lead">Pregunta #4</p>
+            <p class="typ-lead">
+              <i class="fa-solid fa-chevron-down"></i>
+            </p>
           </div>
         </div>
       </div>
@@ -388,7 +433,7 @@
             nisl, in posuere nisl ipsum eu metus. Donec id arcu vel velit
             efficitur fermentum. Vivamus sit amet erat.
           </p>
-          <button class="btnPrimary">Inscribirse</button>
+          <a href="form" class="btnPrimary">Inscribirse</a>
         </div>
         <svg
           width="1500"
