@@ -384,7 +384,6 @@ nav li:last-child {
   align-items: stretch;
 }
 
-/* Columnas 50 / 50 */
 .divAboutLeft,
 .divAboutRight {
   flex: 1 1 0;
@@ -417,54 +416,104 @@ nav li:last-child {
   object-fit: cover;
   display: block;
 }
-
+/* Contenedor derecho (tu bloque rojo) */
 .divAboutRight {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
-  gap: 40px;
+  gap: 32px;
+
   width: 100%;
+  padding: clamp(16px, 3vw, 32px);
+
+  overflow: hidden;
 }
 
+/* Contenedor de post-its */
 .divAboutPostitContainer {
-  display: flex;
-  gap: 16px;
   width: 100%;
+  max-width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+
+  gap: clamp(8px, 1.2vw, 16px);
 }
 
+/* Post-it base */
 .divAboutPostit {
-  box-shadow: var(--shadow-m1);
   display: flex;
-  gap: 42px;
   flex-direction: column;
-  padding: 42px 32px;
-  width: 100%;
+  justify-content: center;
+  gap: 16px;
+  height: fit-content;
+  padding: clamp(10px, 2rem, 144541px);
+  flex: 1 1 1;
+  max-width: 220px;
+  box-shadow: var(--shadow-m1);
+  min-width: 0;
 }
 
+/* Tipos dentro */
 .divAboutPostit p {
-  font-size: 20px;
   font-family: var(--ff-display);
   font-weight: 300;
+  font-size: clamp(16px, 1.2vw, 20px);
+  line-height: 1.1;
 }
 
 .divAboutPostit span {
-  font-size: 16px;
-  font-family: var(--ff-display);
-  font-weight: 300;
+  font-family: var(--ff-body);
+  font-weight: 500;
+  font-size: clamp(11px, 0.95vw, 14px);
+  opacity: 0.8;
 }
+
+/* Colores + rotaciones suaves */
 .postIt1 {
   background-color: #87cddc;
-  transform: rotate(-4deg);
+  transform: rotate(-2.5deg);
+  transition: 200ms;
+}
+.postIt1:hover {
+  transform: rotate(6deg);
+  box-shadow: var(--shadow-m4);
 }
 .postIt2 {
-  transform: rotate(2deg);
   background-color: #eee8a2;
+  transform: rotate(-1.8deg);
+  transition: 200ms;
+}
+.postIt2:hover {
+  transform: rotate(6deg);
+  box-shadow: var(--shadow-m4);
 }
 .postIt3 {
   background-color: #e0b4e8;
-  transform: rotate(3deg);
+  transform: rotate(2.2deg);
+  transition: 200ms;
+}
+.postIt3:hover {
+  transform: rotate(-4.2deg);
+  box-shadow: var(--shadow-m4);
+}
+
+/* Ajustes extra en pantallas chicas */
+@media (max-width: 768px) {
+  .divAboutPostit {
+    flex: 1 1 clamp(150px, 45%, 220px);
+    max-width: none;
+  }
+  .sectionAboutContent {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: stretch;
+  }
 }
 
 /**************************************** Padre Lucas ****************************************/
@@ -722,20 +771,16 @@ iframe {
 }
 
 .footerContentContainer {
-  background-image: linear-gradient(
-    rgba(241, 241, 241, 1),
-    rgba(255, 205, 161, 1)
-  );
   width: 100%;
-  height: 840px;
+  height: fit-content;
   display: flex;
   align-items: center;
   padding: 0px 40px;
   max-width: 1420px;
-  gap: -250px;
   flex-direction: column;
 }
 .footerTextContainer {
+  transform: translateY(8rem);
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -744,9 +789,12 @@ iframe {
   max-width: 75%;
 }
 
-svg {
-  bottom: 10%;
-  position: relative;
+.sunrise {
+  background-image: linear-gradient(
+    rgba(241, 241, 241, 1),
+    rgba(255, 205, 161, 1)
+  );
+  width: 100%;
 }
 
 /**************************************** Form ****************************************/
@@ -760,6 +808,7 @@ svg {
   box-sizing: border-box;
   width: 100%;
   padding: 0px 40px;
+  margin: 0;
 }
 
 .sectionCardStyleContainer {
@@ -814,10 +863,133 @@ svg {
   font-family: var(--ff-body);
 }
 
-.formLine input ::placeholder {
+.formLine select {
+  padding: 16px 24px;
+  flex: 1;
+  box-shadow: var(--shadow-m1);
+  border: none;
+  font-family: var(--ff-body);
 }
 .formLine p {
   margin: auto;
   height: fit-content;
   flex: 0.4;
+}
+
+.healthFieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.healthFieldset legend {
+  margin-bottom: 10px;
+}
+
+/* grid responsive para los checks */
+.healthCheckboxGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 10px 18px;
+}
+
+/* cada item */
+.healthCheck {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* checkbox simple, prolijo */
+.healthCheck input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #111; /* podés cambiar por tu verde si querés */
+}
+
+/* mobile */
+@media (max-width: 520px) {
+  .healthCheckboxGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* desktop grande */
+@media (min-width: 1100px) {
+  .healthCheckboxGrid {
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+  }
+}
+
+.formTableBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* Wrapper para responsivo */
+.formTableWrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 16px;
+  box-shadow: var(--shadow-m1);
+  background: #fff;
+}
+
+/* Tabla base */
+.formTable {
+  width: 100%;
+  min-width: 520px; /* fuerza scroll suave en mobile */
+  border-collapse: collapse;
+}
+
+/* Header */
+.formTable thead th {
+  text-align: left;
+  padding: 14px 16px;
+  background: #fafafa;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Celdas */
+.formTable td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Última fila sin línea fuerte */
+.formTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Inputs dentro de celdas */
+.tableInput {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--ff-body);
+  box-shadow: none; /* evita dobles sombras */
+}
+
+/* Separador vertical suave entre columnas */
+.formTable thead th + th,
+.formTable td + td {
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Hint */
+.tableHint {
+  opacity: 0.65;
+}
+
+/* Ajustes en pantallas grandes */
+@media (min-width: 900px) {
+  .formTable {
+    min-width: 0;
+  }
 }

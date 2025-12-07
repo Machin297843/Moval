@@ -17,9 +17,11 @@
       integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+    /><link rel="icon" type="image/png" href="Assets/Favico.png">
   </head>
   <body>
+    
+    <!-- Whatsapp fixedbutton -->
     <div class="sectionContentContainer">
       <svg
         id="WhatsappButton"
@@ -39,16 +41,18 @@
         />
       </svg>
     </div>
+
+    <!-- Navbar-->
     <nav>
       <ul class="sidebar">
         <li  onClick=hideSidebar() >
           <a href="#"><i class="fa-solid fa-xmark"></a></i>
         </li>
         <li>
-          <a href="#" class="typ-body">Nosotros</a>
+          <a href="#aboutSection" class="typ-body">Nosotros</a>
         </li>
         <li><a href="#" class="typ-body">Actividades</a></li>
-        <li><a href="#" class="typ-body">Ubicacion</a></li>
+        <li><a href="#" class="typ-body">Ubicación</a></li>
         <li><a href="#" class="typ-body">Preguntas frecuentes</a></li>
         <li>
           <button class="btnSecondary">Contacto</button>
@@ -56,7 +60,7 @@
       </ul>
       <ul>
         <li><img src="Assets/MovalLogo.png" alt="Moval Logo" /></li>
-        <li class="hideOnMobile" class="typ-body"><a href="#">Nosotros</a></li>
+        <li class="hideOnMobile" class="typ-body"><a href="#aboutSection">Nosotros</a></li>
         <li class="hideOnMobile" class="typ-body"><a href="#">Actividades</a></li>
         <li class="hideOnMobile" class="typ-body"><a href="#">Ubicacion</a></li>
         <li class="hideOnMobile" class="typ-body"><a href="#">Preguntas frecuentes</a></li>
@@ -105,28 +109,24 @@
         <div class="sectionAboutContent">
           <div class="divAboutLeft">
             <div class="imageCard">
-              <img src="Assets/LuquitasEnOlla.png" alt="About Moval" />
+              <img src="Assets/Campamento.png" alt="About Moval" />
             </div>
           </div>
 
           <div class="divAboutRight">
             <h1 class="typ-h1">¿Qué es Moval?</h1>
             <div class="divAboutPostitContainer">
-              <!-- post-its -->
-
-              <div class="divAboutPostitContainer">
-                <div class="divAboutPostit postIt1">
-                  <p>El mejor campamento</p>
-                  <span>Luquitas 23 años</span>
-                </div>
-                <div class="divAboutPostit postIt2">
-                  <p>El mejor campamento</p>
-                  <span>Felipe 83 años</span>
-                </div>
-                <div class="divAboutPostit postIt3">
-                  <p>El mejor campamento</p>
-                  <span>Julieta xx años</span>
-                </div>
+              <div class="divAboutPostit postIt1">
+                <p>El mejor campamento</p>
+                <span>Luquitas 23 años</span>
+              </div>
+              <div class="divAboutPostit postIt2">
+                <p>El mejor campamento</p>
+                <span>Felipe 83 años</span>
+              </div>
+              <div class="divAboutPostit postIt3">
+                <p>El mejor campamento</p>
+                <span>Julieta xx años</span>
               </div>
             </div>
             <div class="divAboutTextContainer">
@@ -149,37 +149,7 @@
       </div>
     </section>
 
-    <section id="padreLucasSection ">
-      <div class="sectionContentContainer">
-        <div class="padreLucasContent">
-          <div class="padreLucasTextContainer">
-            <div>
-              <h1 class="typ-h1">Padre Lucas</h1>
-              <h2 class="typ-subtitle-2">1924 - 2014</h2>
-            </div>
-            <p class="typ-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              vitae ligula eget ipsum elementum pulvinar. Curabitur non justo
-              turpis. Sed feugiat, urna at posuere porta, libero lorem aliquet
-              nisl, in posuere nisl ipsum eu metus. Donec id arcu vel velit
-              efficitur fermentum. Vivamus sit amet erat.
-            </p>
-            <a
-              href="https://iglesiacatolica.org.uy/la-pascua-de-fr-lucas-del-valle-op/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btnSecondary"
-            >
-              Leer más
-            </a>
-          </div>
-          <div class="padreLucasImg">
-            <img src="Assets/PadreLucas.png" alt="Padre Lucas" />
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <!-- Our Team Section -->
     <section class="ourTeamSection">
       <div class="sectionContentContainer">
         <h1 class="typ-h1">¿Quienes somos?</h1>
@@ -214,7 +184,40 @@
         </div>
       </div>
     </section>
+    
+    <!-- Padre Lucas Section -->
+    <section id="padreLucasSection ">
+      <div class="sectionContentContainer">
+        <div class="padreLucasContent">
+          <div class="padreLucasTextContainer">
+            <div>
+              <h1 class="typ-h1">Padre Lucas</h1>
+              <h2 class="typ-subtitle-2">1924 - 2014</h2>
+            </div>
+            <p class="typ-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+              vitae ligula eget ipsum elementum pulvinar. Curabitur non justo
+              turpis. Sed feugiat, urna at posuere porta, libero lorem aliquet
+              nisl, in posuere nisl ipsum eu metus. Donec id arcu vel velit
+              efficitur fermentum. Vivamus sit amet erat.
+            </p>
+            <a
+              href="https://iglesiacatolica.org.uy/la-pascua-de-fr-lucas-del-valle-op/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btnSecondary"
+            >
+              Leer más
+            </a>
+          </div>
+          <div class="padreLucasImg">
+            <img src="Assets/PadreLucas.png" alt="Padre Lucas" />
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Activites Section -->
     <section class="activitiesSection">
       <div class="sectionContentContainer">
         <div class="sectionTitleContainer">
@@ -230,9 +233,8 @@
               <i class="fa-solid fa-fire activityIcon"></i>
               <div class="activityCardTextContainer">
                 <p class="typ-lead">Fogatas</p>
-                <p class="body">
-                  Fuego y danzas siempre nos acompañan para alegrar nuestras
-                  noches.
+                <p class="small">
+Cantamos juntos al amanecer y a la noche. Guitarras, risas y tradición Moval.
                 </p>
               </div>
             </div>
@@ -240,14 +242,16 @@
               <i class="fa-solid fa-guitar activityIcon"></i>
               <div class="activityCardTextContainer">
                 <p class="typ-lead">Múisca</p>
-                <p class="body">Descripción</p>
+                <p class="typ-small">
+Cantamos juntos al amanecer y a la noche. Guitarras, risas y tradición Moval.</p>
               </div>
             </div>
             <div class="activityCard">
               <i class="fa-solid fa-book-open activityIcon"></i>
               <div class="activityCardTextContainer">
                 <p class="typ-lead">Reflexión</p>
-                <p class="body">Moval es un espacio para explorar emociones</p>
+                <p class="typ-small">
+Cantamos juntos al amanecer y a la noche. Guitarras, risas y tradición Moval. </p>
               </div>
             </div>
           </div>
@@ -256,23 +260,23 @@
               <i class="fa-solid fa-moon activityIcon"></i>
               <div class="activityCardTextContainer">
                 <p class="typ-lead">Juegos Nocturnos</p>
-                <p class="body">Descripción</p>
+                <p class="typ-small">
+Cantamos juntos al amanecer y a la noche. Guitarras, risas y tradición Moval. </p>
               </div>
             </div>
             <div class="activityCard">
               <i class="fa-solid fa-kitchen-set activityIcon"></i>
               <div class="activityCardTextContainer">
                 <p class="typ-lead">Cocina</p>
-                <p class="body">Descripción</p>
+                <p class="typ-small">
+Aprendemos a compartir y cocinar en equipo. Comida rica, simple y hecha con amor</p>
               </div>
             </div>
             <div class="activityCard">
               <i class="fa-solid fa-person-hiking activityIcon"></i>
               <div class="activityCardTextContainer">
                 <p class="typ-lead">Caminatas</p>
-                <p class="body">
-                  Emprendemos diversas caminatas para descubrir la belleza del
-                  campo y los cerros
+                <p class="typ-small">Descubrimos la magia de Tres Arroyos, respiramos el aire fresco de los senderos y cerros. 
                 </p>
               </div>
             </div>
@@ -281,14 +285,7 @@
       </div>
     </section>
 
-    <!-- <section id="bannerSection ">
-      <h1 class="typ-h2">Banner</h1>
-    </section> -->
-
-    <!-- <section id="facilitiesSection ">
-      <h1 class="typ-h2">Instalaciones</h1>
-    </section> -->
-
+    <!-- Map Section -->
     <section class="mapSection">
       <div class="sectionContentContainer">
         <div class="sectionTitleContainer">
@@ -323,6 +320,7 @@
       </div>
     </section>
 
+    <!-- Checlist Section -->
     <section id="checklistSection">
       <div class="sectionContentContainer">
         <div class="sectionTitleContainer">
@@ -392,6 +390,7 @@
       </div>
     </section>
 
+    <!-- FAQ Section -->
     <section id="FaqSection">
       <div class="sectionContentContainer">
         <div class="sectionTitleContainer">
@@ -427,6 +426,7 @@
       </div>
     </section>
 
+    <!-- Footer Section -->
     <section id="FooterSection">
       <div class="footerContentContainer">
         <div class="footerTextContainer">
@@ -441,6 +441,7 @@
           <a href="form" class="btnPrimary">Inscribirse</a>
         </div>
         <svg
+        class="sunrise"
           width="1500"
           viewBox="0 0 1920 714"
           fill="none"
@@ -504,6 +505,8 @@
         </svg>
       </div>
     </section>
+
+    <!-- JS  -->
     <script src="index.js"></script>
   </body>
 </html>
