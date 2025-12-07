@@ -155,6 +155,26 @@ section {
   text-align: center;
 }
 
+#WhatsappButton {
+  position: fixed;
+  right: 10%;
+  bottom: 10%;
+
+  z-index: 9999;
+  cursor: pointer;
+
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2));
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+#WhatsappButton:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.25));
+}
+
+#WhatsappButton:active {
+  transform: translateY(1px);
+}
 /**************************************** Buttons ****************************************/
 
 .btnPrimary {
@@ -601,45 +621,50 @@ nav li:last-child {
 }
 
 .activityCard {
-  padding: 24px;
+  height: 10rem;
+  padding: clamp(0rem, 2.4rem, 3.4rem);
   display: flex;
   flex-direction: column;
-  gap: 24px;
   text-align: center;
   background-color: white;
   box-shadow: var(--shadow-m1);
   border-radius: 12px;
   width: 100%;
-}
-.activityIcon {
-  font-size: 80px;
-  color: var(--primary-color);
-}
-.activityCardTextContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-#WhatsappButton {
-  position: fixed;
-  right: 10%;
-  bottom: 10%;
-
-  z-index: 9999;
-  cursor: pointer;
-
-  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2));
-  transition: transform 0.15s ease, filter 0.15s ease;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#WhatsappButton:hover {
-  transform: translateY(-3px);
-  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.25));
+.activityCard p {
+  margin-top: auto;
+  color: white;
 }
 
-#WhatsappButton:active {
-  transform: translateY(1px);
+.activityFogones {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+    url("Assets/Actividad_Fogones.png");
 }
+.activityEnsayos {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+    url("Assets/Actividad_Caminata.png");
+}
+.activityReflexion {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+    url("Assets/Actividad_Reflexion.png");
+}
+.activityCocina {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+    url("Assets/Actividad_Cocina.png");
+}
+.activityJuegosNocturnos {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+    url("Assets/Actividad_Juegos_Nocturnos.png");
+}
+.activityCaminatas {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+    url("Assets/Actividad_Caminata.png");
+}
+
 /**************************************** Map ****************************************/
 
 iframe {
@@ -797,104 +822,165 @@ iframe {
   width: 100%;
 }
 
-/**************************************** Form ****************************************/
-#formBody {
+/******************************************************************************** Form ********************************************************************************/
+
+main {
   display: flex;
   flex-direction: column;
   gap: 64px;
-}
-.listaDeCosasALlevar,
-.fichaDelAcampante {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 40px;
-  margin: 0;
+  margin-top: 64px;
 }
 
-.sectionCardStyleContainer {
-  box-sizing: border-box;
+/* Sections del form */
+.listaDeCosasALlevar,
+.fichaDelAcampante {
   width: 100%;
-  height: 100%;
+  padding: 0 40px;
+  margin: 0;
   display: flex;
-  padding: 40px 75px;
+  justify-content: center;
+}
+
+/* Card contenedora */
+.sectionCardStyleContainer {
+  width: 100%;
   max-width: 1420px;
-  gap: 60px;
+  padding: 40px 75px;
+  display: flex;
   flex-direction: column;
+  gap: 40px;
+
   background-color: #ffffff;
   box-shadow: var(--shadow-m2);
 }
 
+/* Responsive general de la card */
+@media (max-width: 900px) {
+  .sectionCardStyleContainer {
+    padding: 28px 28px;
+  }
+}
+@media (max-width: 520px) {
+  .listaDeCosasALlevar,
+  .fichaDelAcampante {
+    padding: 0 16px;
+  }
+  .sectionCardStyleContainer {
+    padding: 22px 18px;
+  }
+}
+
+/* =========================================================
+   5) Bloque lista de cosas
+========================================================= */
 .itemsListContainer {
   width: 100%;
   display: flex;
-  gap: 128px;
+  gap: 64px;
+  align-items: flex-start;
 }
 
-.itemsList {
+.itemsList,
+.importantContainer {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  flex: 1;
 }
 
 .costo {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 40px 0px;
+  padding-top: 8px;
 }
 
+@media (max-width: 900px) {
+  .itemsListContainer {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+/* =========================================================
+   6) Form layout
+========================================================= */
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
-.formLine {
-  justify-content: center;
+
+/* Nueva fila ordenada para labels + controles */
+.formRow {
   display: flex;
-  width: 100%;
   gap: 20px;
+  align-items: center;
+  width: 100%;
 }
 
-.formLine input {
-  padding: 16px 24px;
-  flex: 1;
-  box-shadow: var(--shadow-m1);
-  border: none;
-  font-family: var(--ff-body);
-}
-
-.formLine select {
-  padding: 16px 24px;
-  flex: 1;
-  box-shadow: var(--shadow-m1);
-  border: none;
-  font-family: var(--ff-body);
-}
-.formLine p {
-  margin: auto;
-  height: fit-content;
+/* Etiqueta */
+.formLabel {
   flex: 0.4;
 }
 
+/* Control base (input/select) */
+.formControl {
+  flex: 1;
+  padding: 16px 24px;
+  border: none;
+  box-shadow: var(--shadow-m1);
+  font-family: var(--ff-body);
+  background: #fff;
+}
+
+/* En pantallas chicas, label arriba */
+@media (max-width: 820px) {
+  .formRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .formLabel {
+    flex: 1;
+  }
+}
+
+/* Agrupación de secciones dentro del form */
+.formSection {
+  border: none;
+  padding: 0;
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.formSection > legend {
+  margin-bottom: 8px;
+}
+
+/* =========================================================
+   7) Checks de salud
+========================================================= */
 .healthFieldset {
   border: none;
   padding: 0;
-  margin: 0;
-  width: 100%;
+  margin: 6px 0 2px 0;
 }
 
 .healthFieldset legend {
   margin-bottom: 10px;
 }
 
-/* grid responsive para los checks */
+/* Grid responsive para los checks */
 .healthCheckboxGrid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
   gap: 10px 18px;
 }
 
-/* cada item */
 .healthCheck {
   display: flex;
   align-items: center;
@@ -902,35 +988,34 @@ iframe {
   cursor: pointer;
 }
 
-/* checkbox simple, prolijo */
 .healthCheck input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  accent-color: #111; /* podés cambiar por tu verde si querés */
+  accent-color: var(--grey-300);
 }
 
-/* mobile */
 @media (max-width: 520px) {
   .healthCheckboxGrid {
     grid-template-columns: 1fr;
   }
 }
 
-/* desktop grande */
 @media (min-width: 1100px) {
   .healthCheckboxGrid {
-    grid-template-columns: repeat(3, minmax(160px, 1fr));
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
   }
 }
 
+/* =========================================================
+   8) Tabla de medicación
+========================================================= */
 .formTableBlock {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
-/* Wrapper para responsivo */
 .formTableWrap {
   width: 100%;
   overflow-x: auto;
@@ -939,14 +1024,12 @@ iframe {
   background: #fff;
 }
 
-/* Tabla base */
 .formTable {
   width: 100%;
-  min-width: 520px; /* fuerza scroll suave en mobile */
+  min-width: 520px;
   border-collapse: collapse;
 }
 
-/* Header */
 .formTable thead th {
   text-align: left;
   padding: 14px 16px;
@@ -954,18 +1037,20 @@ iframe {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* Celdas */
 .formTable td {
   padding: 10px 12px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-/* Última fila sin línea fuerte */
 .formTable tbody tr:last-child td {
   border-bottom: none;
 }
 
-/* Inputs dentro de celdas */
+.formTable thead th + th,
+.formTable td + td {
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
+}
+
 .tableInput {
   width: 100%;
   padding: 12px 14px;
@@ -973,21 +1058,12 @@ iframe {
   outline: none;
   background: transparent;
   font-family: var(--ff-body);
-  box-shadow: none; /* evita dobles sombras */
 }
 
-/* Separador vertical suave entre columnas */
-.formTable thead th + th,
-.formTable td + td {
-  border-left: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-/* Hint */
 .tableHint {
   opacity: 0.65;
 }
 
-/* Ajustes en pantallas grandes */
 @media (min-width: 900px) {
   .formTable {
     min-width: 0;

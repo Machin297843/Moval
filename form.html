@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Moval - Ficha del acampante</title>
+
+    <link rel="icon" type="image/png" href="Assets/Favico.png" />
     <link rel="stylesheet" href="style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,45 +17,62 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    /><link rel="icon" type="image/png" href="Assets/Favico.png">
+    />
   </head>
+
   <body id="formBody">
+    <!-- Nav -->
     <nav>
       <ul class="sidebar">
-        <li  onClick=hideSidebar() >
-          <a href="#"><i class="fa-solid fa-xmark"></a></i>
+        <li onClick="hideSidebar()">
+          <a href="#"><i class="fa-solid fa-xmark"></i></a>
         </li>
+        <li><a href="index.html#aboutSection" class="typ-body">Nosotros</a></li>
         <li>
-          <a href="#aboutSection" class="typ-body">Nosotros</a>
+          <a href="index.html#activitiesSection" class="typ-body"
+            >Actividades</a
+          >
         </li>
-        <li><a href="index.html" class="typ-body">Actividades</a></li>
-        <li><a href="index.html" class="typ-body">Ubicación</a></li>
-        <li><a href="index.html" class="typ-body">Preguntas frecuentes</a></li>
+        <li><a href="index.html#mapSection" class="typ-body">Ubicación</a></li>
         <li>
-          <button class="btnSecondary">Contacto</button>
+          <a href="index.html#FaqSection" class="typ-body"
+            >Preguntas frecuentes</a
+          >
         </li>
+        <li><button class="btnSecondary" type="button">Contacto</button></li>
       </ul>
+
       <ul>
         <li><img src="Assets/MovalLogo.png" alt="Moval Logo" /></li>
-        <li class="hideOnMobile" class="typ-body"><a href="index.html">Nosotros</a></li>
-        <li class="hideOnMobile" class="typ-body"><a href="index.html">Actividades</a></li>
-        <li class="hideOnMobile" class="typ-body"><a href="index.html">Ubicacion</a></li>
-        <li class="hideOnMobile" class="typ-body"><a href="index.html">Preguntas frecuentes</a></li>
         <li class="hideOnMobile">
-          <button class="btnSecondary">Contacto</button>
+          <a href="index.html#aboutSection">Nosotros</a>
         </li>
-        <li class="menu-button" onClick=showSidebar() >
-          <a href="#"><i class="fa-solid fa-bars"></a></i>
+        <li class="hideOnMobile">
+          <a href="index.html#activitiesSection">Actividades</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="index.html#mapSection">Ubicación</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="index.html#FaqSection">Preguntas frecuentes</a>
+        </li>
+        <li class="hideOnMobile">
+          <button class="btnSecondary" type="button">Contacto</button>
+        </li>
+        <li class="menu-button" onClick="showSidebar()">
+          <a href="#"><i class="fa-solid fa-bars"></i></a>
         </li>
       </ul>
     </nav>
-    </section>
-    <section class="listaDeCosasALlevar">
+
+    <main>
+      <!-- Lista -->
+      <section class="listaDeCosasALlevar">
         <div class="sectionCardStyleContainer">
-          <h1 class="typ-subtitle-1">Tenés todo listo?</h1>
+          <h1 class="typ-subtitle-1">¿Tenés todo listo?</h1>
+
           <div class="itemsListContainer">
             <div class="itemsList">
               <p class="typ-subtitle-2">Cosas para llevar a Moval</p>
@@ -64,211 +84,360 @@
                 • Sobre de dormir.<br />
                 • Chancletas, gorro, traje de baño y abrigo. <br />
                 • Plato hondo en lo posible, cubiertos y vaso. <br />
-                • Linterna (CON PILAS !!!!!),<br />
-                • Nylon (2 mts), Cuerda (5 mts) y palillos de ropa.<br />
-                • 1 Bidón de Agua.
+                • Linterna (con pilas),<br />
+                • Nylon (2 mts), cuerda (5 mts) y palillos de ropa.<br />
+                • 1 bidón de agua.
               </p>
             </div>
+
             <div class="importantContainer">
-              <p class="typ-subtitle-2">IMPORTANTE!</p>
+              <p class="typ-subtitle-2">Importante</p>
               <p class="typ-body">
-                • NO LLEVAR CELULAR  <br />
-                • NO LLEVAR DINERO <br />
-                • ETIQUETAR LAS PERTENENCIAS <br />
-                • QUE EL ACAMPANTE ARME EL BOLSO PARA SABER QUÉ LLEVA
+                • No llevar celular <br />
+                • No llevar dinero <br />
+                • Etiquetar las pertenencias <br />
+                • Que el acampante arme el bolso para saber qué lleva
               </p>
             </div>
           </div>
+
           <div class="costo">
-            <p class="typ-subtitle-2">El costo del campamento es de 5000 pesos. </p>
-            <p class="typ-body">En lo posible se solicita se abone cuando se realiza la inscripción (hasta el 15 de diciembre se reciben)
-Como siempre ningún niño deja de ir por no poder abonarlo. Cada uno colabora con lo que puede.
-Los esperamos!!!!!!</p>
+            <p class="typ-subtitle-2">Costo del campamento: $5000</p>
+            <p class="typ-body">
+              En lo posible se solicita abonar al momento de la inscripción
+              (hasta el 15 de diciembre). Como siempre, ningún niño deja de ir
+              por no poder abonarlo. Cada uno colabora con lo que puede. ¡Los
+              esperamos!
+            </p>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="fichaDelAcampante">
-      <div class="sectionCardStyleContainer">
-        <p class="typ-subtitle-1">FICHA DEL ACAMPANTE MOVAL 2026</p>
-        <form action="" method="post" class="form">
-          <div class="formLine">
-            <p class="typ-lead">NOMBRE Y APELLIDO</p><input id="" type="text" value="" class="formInput" placeholder="Ingrese...">
-          </div>
-          <div class="formLine">
-            <p class="typ-lead">FECHA DE NACIMIENTO</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
-          </div>
-          <div class="formLine">
-            <p class="typ-lead">CÉDULA DE IDENTIDAD</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
-          </div>
-          <div class="formLine">
-            <p class="typ-lead">TELÉFONO PARTICULAR</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
-          </div>
-          <div class="formLine">
-            <p class="typ-lead">CEL.  DE PADRE Y/O MADRE</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
-          </div>
-          <div class="formLine">
-            <p class="typ-lead">SOCIEDAD MÉDICA</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
-          </div>
-          <div class="formLine">
-            <p class="typ-lead">EMERGENCIA MÉDICA</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
-          </div>
-          <div class="formLine">
-            <p class="typ-lead">¿PADECE ALGUNA ENFERMEDAD?</p> 
-              <select name="" id=""> 
-                <option value="">Seleccione una opción</option>
-                <option value="si">Si</option>
-                <option value="no">No</option>
-              </select>
-          </div>
-           <div class="formLine">
-            <p class="typ-lead">¿CUAL?</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
-          </div>
-          <fieldset class="healthFieldset">
-    <legend class="typ-lead">PROPENSO A SUFRIR:</legend>
+      </section>
 
-    <div class="healthCheckboxGrid">
-      <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="oidos" />
-        <span class="typ-body">Oídos</span>
-      </label>
+      <!-- Form -->
+      <section class="fichaDelAcampante">
+        <div class="sectionCardStyleContainer">
+          <h1 class="typ-subtitle-1">Ficha del acampante Moval 2026</h1>
 
-      <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="garganta" />
-        <span class="typ-body">Garganta</span>
-      </label>
+          <form action="" method="post" class="form">
+            <!-- Datos personales -->
+            <div class="formRow">
+              <label class="typ-lead formLabel" for="nombre"
+                >Nombre y apellido</label
+              >
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                class="formControl"
+                placeholder="Ingrese..."
+              />
+            </div>
 
-      <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="bronquitis" />
-        <span class="typ-body">Bronquitis</span>
-      </label>
+            <div class="formRow">
+              <label class="typ-lead formLabel" for="fechaNacimiento"
+                >Fecha de nacimiento</label
+              >
+              <input
+                id="fechaNacimiento"
+                name="fechaNacimiento"
+                type="text"
+                class="formControl"
+                placeholder="Ingrese..."
+              />
+            </div>
 
-      <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="asma" />
-        <span class="typ-body">Asma</span>
-      </label>
+            <div class="formRow">
+              <label class="typ-lead formLabel" for="ci"
+                >Cédula de identidad</label
+              >
+              <input
+                id="ci"
+                name="ci"
+                type="text"
+                class="formControl"
+                placeholder="Ingrese..."
+              />
+            </div>
 
-      <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="dolor_cabeza" />
-        <span class="typ-body">Dolor de cabeza</span>
-      </label>
+            <div class="formRow">
+              <label class="typ-lead formLabel" for="telParticular"
+                >Teléfono particular</label
+              >
+              <input
+                id="telParticular"
+                name="telParticular"
+                type="text"
+                class="formControl"
+                placeholder="Ingrese..."
+              />
+            </div>
 
-      <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="mareos" />
-        <span class="typ-body">Mareos</span>
-      </label>
+            <div class="formRow">
+              <label class="typ-lead formLabel" for="telPadres"
+                >Cel. de padre y/o madre</label
+              >
+              <input
+                id="telPadres"
+                name="telPadres"
+                type="text"
+                class="formControl"
+                placeholder="Ingrese..."
+              />
+            </div>
 
-      <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="trastornos_digestivos" />
-        <span class="typ-body">Trastornos digestivos</span>
-      </label>
+            <div class="formRow">
+              <label class="typ-lead formLabel" for="sociedadMedica"
+                >Sociedad médica</label
+              >
+              <input
+                id="sociedadMedica"
+                name="sociedadMedica"
+                type="text"
+                class="formControl"
+                placeholder="Ingrese..."
+              />
+            </div>
 
-      <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="resfrio_tos" />
-        <span class="typ-body"> Resfrío o tos</span>
-      </label>
-    </div>
-          </fieldset>
-          <div class="formLine">
-            <p class="typ-lead">¿ESTÁ SIGUIENDO ALGÚN TRATAMIENTO MÉDICO?</p> 
-              <select name="" id=""> 
-                <option value="">Seleccione una opción</option>
-                <option value="si">Si</option>
-                <option value="no">No</option>
-              </select>
-          </div>
-           <div class="formLine">
-            <p class="typ-lead">¿CUAL?</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
-          </div>
-          <div class="formTableBlock">
-  <p class="typ-lead">MEDICACIÓN (si corresponde)</p>
+            <div class="formRow">
+              <label class="typ-lead formLabel" for="emergenciaMedica"
+                >Emergencia médica</label
+              >
+              <input
+                id="emergenciaMedica"
+                name="emergenciaMedica"
+                type="text"
+                class="formControl"
+                placeholder="Ingrese..."
+              />
+            </div>
 
-  <div class="formTableWrap">
-    <table class="formTable">
-      <thead>
-        <tr>
-          <th class="typ-body">MEDICAMENTO</th>
-          <th class="typ-body">DOSIS</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <input
-              type="text"
-              name="medicamento[]"
-              class="tableInput"
-              placeholder="Ej: Salbutamol"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              name="dosis[]"
-              class="tableInput"
-              placeholder="Ej: 2 puffs"
-            />
-          </td>
-        </tr>
+            <!-- Salud -->
+            <fieldset class="formSection">
+              <legend class="typ-subtitle-2">Salud</legend>
 
-        <tr>
-          <td>
-            <input
-              type="text"
-              name="medicamento[]"
-              class="tableInput"
-              placeholder="Ingrese..."
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              name="dosis[]"
-              class="tableInput"
-              placeholder="Ingrese..."
-            />
-          </td>
-        </tr>
+              <div class="formRow">
+                <label class="typ-lead formLabel" for="padeceEnfermedad"
+                  >¿Padece alguna enfermedad?</label
+                >
+                <select
+                  id="padeceEnfermedad"
+                  name="padeceEnfermedad"
+                  class="formControl"
+                >
+                  <option value="">Seleccione una opción</option>
+                  <option value="si">Sí</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
 
-        <tr>
-          <td>
-            <input
-              type="text"
-              name="medicamento[]"
-              class="tableInput"
-              placeholder="Ingrese..."
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              name="dosis[]"
-              class="tableInput"
-              placeholder="Ingrese..."
-            />
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+              <div class="formRow">
+                <label class="typ-lead formLabel" for="cualEnfermedad"
+                  >¿Cuál?</label
+                >
+                <input
+                  id="cualEnfermedad"
+                  name="cualEnfermedad"
+                  type="text"
+                  class="formControl"
+                  placeholder="Ingrese..."
+                />
+              </div>
 
-  <p class="typ-tiny tableHint">
-    Si no toma medicación, podés dejarlo en blanco.
-  </p>
-</div>
-<div class="formLine">
-            <p class="typ-lead">¿TIENE CONTRAINDICADO ALGÚN MÉDICO?</p> 
-              <select name="" id=""> 
-                <option value="">Seleccione una opción</option>
-                <option value="si">Si</option>
-                <option value="no">No</option>
-              </select>
-          </div>
-           <div class="formLine">
-            <p class="typ-lead">¿CUAL?</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
-          </div>
-        </form>
-      </div>
-    </section>
+              <fieldset class="healthFieldset">
+                <legend class="typ-lead">Propenso a sufrir</legend>
+                <div class="healthCheckboxGrid">
+                  <label class="healthCheck">
+                    <input type="checkbox" name="propenso[]" value="oidos" />
+                    <span class="typ-body">Oídos</span>
+                  </label>
+                  <label class="healthCheck">
+                    <input type="checkbox" name="propenso[]" value="garganta" />
+                    <span class="typ-body">Garganta</span>
+                  </label>
+                  <label class="healthCheck">
+                    <input
+                      type="checkbox"
+                      name="propenso[]"
+                      value="bronquitis"
+                    />
+                    <span class="typ-body">Bronquitis</span>
+                  </label>
+                  <label class="healthCheck">
+                    <input type="checkbox" name="propenso[]" value="asma" />
+                    <span class="typ-body">Asma</span>
+                  </label>
+                  <label class="healthCheck">
+                    <input
+                      type="checkbox"
+                      name="propenso[]"
+                      value="dolor_cabeza"
+                    />
+                    <span class="typ-body">Dolor de cabeza</span>
+                  </label>
+                  <label class="healthCheck">
+                    <input type="checkbox" name="propenso[]" value="mareos" />
+                    <span class="typ-body">Mareos</span>
+                  </label>
+                  <label class="healthCheck">
+                    <input
+                      type="checkbox"
+                      name="propenso[]"
+                      value="trastornos_digestivos"
+                    />
+                    <span class="typ-body">Trastornos digestivos</span>
+                  </label>
+                  <label class="healthCheck">
+                    <input
+                      type="checkbox"
+                      name="propenso[]"
+                      value="resfrio_tos"
+                    />
+                    <span class="typ-body">Resfrío o tos</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="formRow">
+                <label class="typ-lead formLabel" for="tratamientoMedico"
+                  >¿Está siguiendo algún tratamiento médico?</label
+                >
+                <select
+                  id="tratamientoMedico"
+                  name="tratamientoMedico"
+                  class="formControl"
+                >
+                  <option value="">Seleccione una opción</option>
+                  <option value="si">Sí</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+
+              <div class="formRow">
+                <label class="typ-lead formLabel" for="cualTratamiento"
+                  >¿Cuál?</label
+                >
+                <input
+                  id="cualTratamiento"
+                  name="cualTratamiento"
+                  type="text"
+                  class="formControl"
+                  placeholder="Ingrese..."
+                />
+              </div>
+
+              <!-- Tabla medicación -->
+              <div class="formTableBlock">
+                <p class="typ-lead">Medicación (si corresponde)</p>
+
+                <div class="formTableWrap">
+                  <table class="formTable">
+                    <thead>
+                      <tr>
+                        <th class="typ-body">Medicamento</th>
+                        <th class="typ-body">Dosis</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input
+                            type="text"
+                            name="medicamento[]"
+                            class="tableInput"
+                            placeholder="Ej: Salbutamol"
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            name="dosis[]"
+                            class="tableInput"
+                            placeholder="Ej: 2 puffs"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input
+                            type="text"
+                            name="medicamento[]"
+                            class="tableInput"
+                            placeholder="Ingrese..."
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            name="dosis[]"
+                            class="tableInput"
+                            placeholder="Ingrese..."
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input
+                            type="text"
+                            name="medicamento[]"
+                            class="tableInput"
+                            placeholder="Ingrese..."
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            name="dosis[]"
+                            class="tableInput"
+                            placeholder="Ingrese..."
+                          />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <p class="typ-tiny tableHint">
+                  Si no toma medicación, podés dejarlo en blanco.
+                </p>
+              </div>
+
+              <div class="formRow">
+                <label
+                  class="typ-lead formLabel"
+                  for="contraindicadoMedicamento"
+                  >¿Tiene contraindicado algún medicamento?</label
+                >
+                <select
+                  id="contraindicadoMedicamento"
+                  name="contraindicadoMedicamento"
+                  class="formControl"
+                >
+                  <option value="">Seleccione una opción</option>
+                  <option value="si">Sí</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+
+              <div class="formRow">
+                <label class="typ-lead formLabel" for="cualContraindicado"
+                  >¿Cuál?</label
+                >
+                <input
+                  id="cualContraindicado"
+                  name="cualContraindicado"
+                  type="text"
+                  class="formControl"
+                  placeholder="Ingrese..."
+                />
+              </div>
+            </fieldset>
+
+            <!-- Acá después podés seguir con más secciones -->
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
   </body>
 </html>
