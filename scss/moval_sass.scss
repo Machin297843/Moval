@@ -1,0 +1,906 @@
+// ========================================
+// Variables
+// ========================================
+$primary-color: #407135;
+$primary-color-hover: #2d5624;
+$grey-300: #111;
+$white: #fff;
+$bg-light: #f1f1f1;
+
+// Shadows
+$shadow-m1: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+$shadow-m2: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+$shadow-m3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+$shadow-m4: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+$shadow-m5: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+
+// Fonts
+$ff-display: "Londrina Solid", sans-serif;
+$ff-body: "Poppins", sans-serif;
+
+// Font Sizes
+$fs-display: 74px;
+$fs-h1: 48px;
+$fs-h2: 40px;
+$fs-h3: 32px;
+$fs-h4: 28px;
+$fs-subtitle-1: 24px;
+$fs-subtitle-2: 20px;
+$fs-lead: 18px;
+$fs-body: 16px;
+$fs-small: 14px;
+$fs-tiny: 12px;
+
+// Line Heights
+$lh-display: 0.85;
+$lh-heading: 1.2;
+$lh-subtitle: 1.4;
+$lh-body: 1.4;
+
+// Breakpoints
+$breakpoint-mobile: 400px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 967px;
+$breakpoint-large: 1100px;
+
+// ========================================
+// Mixins
+// ========================================
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column($gap: 0) {
+  display: flex;
+  flex-direction: column;
+  @if $gap > 0 {
+    gap: $gap;
+  }
+}
+
+@mixin button-base {
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+@mixin card-base {
+  background-color: $white;
+  border-radius: 12px;
+  box-shadow: $shadow-m1;
+  padding: 24px;
+}
+
+@mixin responsive($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// ========================================
+// Base Styles
+// ========================================
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+body {
+  background-color: $bg-light;
+  color: $grey-300;
+  min-height: 100vh;
+}
+
+// ========================================
+// Typography
+// ========================================
+@mixin typography($family, $size, $line-height, $weight: 500) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+}
+
+.typ-display {
+  @include typography($ff-display, $fs-display, $lh-display);
+  text-shadow: 0px 5px 0px $grey-300;
+}
+
+.typ-h1 { @include typography($ff-display, $fs-h1, $lh-heading); }
+.typ-h2 { @include typography($ff-display, $fs-h2, $lh-heading); }
+.typ-h3 { @include typography($ff-display, $fs-h3, $lh-heading); }
+.typ-h4 { @include typography($ff-display, $fs-h4, $lh-heading); }
+.typ-subtitle-1 { @include typography($ff-body, $fs-subtitle-1, $lh-subtitle); }
+.typ-subtitle-2 { @include typography($ff-body, $fs-subtitle-2, $lh-subtitle); }
+.typ-lead { @include typography($ff-body, $fs-lead, $lh-subtitle, 400); }
+.typ-body { @include typography($ff-body, $fs-body, $lh-body, 400); }
+.typ-small { @include typography($ff-body, $fs-small, $lh-body, 400); }
+.typ-tiny { @include typography($ff-body, $fs-tiny, $lh-body, 400); }
+
+// ========================================
+// Layout Components
+// ========================================
+.sectionContentContainer {
+  width: 100%;
+  height: 100%;
+  @include flex-center;
+  @include flex-column(60px);
+  padding: 0 40px;
+  max-width: 1420px;
+}
+
+section {
+  margin-bottom: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sectionTitleContainer {
+  @include flex-column(16px);
+  text-align: center;
+}
+
+// ========================================
+// Buttons
+// ========================================
+.btnPrimary {
+  box-sizing: border-box;
+  font-family: $ff-display;
+  font-size: 20px;
+  font-weight: 400;
+  width: 277px;
+  @include button-base;
+  color: $grey-300;
+  background-color: $white;
+  padding: 12px 54px;
+  border-radius: 12px;
+  border: solid 2px $grey-300;
+  box-shadow: 0px 6px $grey-300;
+  text-align: center;
+  z-index: 1;
+
+  &:hover {
+    background-color: #d3d3d3;
+  }
+
+  &:active {
+    transform: translateY(6px);
+    box-shadow: none;
+    border: solid 2px $white;
+    color: $white;
+    background-color: rgb(12, 41, 25);
+  }
+}
+
+.btnSecondary {
+  width: fit-content;
+  font-family: $ff-body;
+  color: $grey-300;
+  background-color: $white;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 12px 24px;
+  box-shadow: $shadow-m1;
+  @include button-base;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-m2;
+  }
+}
+
+// ========================================
+// Navigation
+// ========================================
+nav {
+  background-color: $primary-color;
+  box-shadow: $shadow-m1;
+
+  ul {
+    box-sizing: border-box;
+    padding: 6px 40px;
+    margin: auto;
+    max-width: 1500px;
+    display: flex;
+    list-style: none;
+  }
+
+  a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    @include flex-center;
+    border-radius: 2px;
+    color: $white;
+
+    &:hover {
+      background-color: $primary-color-hover;
+    }
+  }
+
+  li {
+    &:first-child { margin-right: auto; }
+    &:last-child { margin-left: auto; }
+  }
+}
+
+.fa-xmark,
+.fa-bars {
+  color: $white;
+  font-size: 24px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: $primary-color;
+  box-shadow: $shadow-m5;
+  @include flex-column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  display: none;
+  padding: 0;
+
+  li {
+    text-align: left;
+    width: 100%;
+
+    &:last-child { display: none; }
+  }
+
+  a {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 15px 30px;
+    width: 100%;
+  }
+}
+
+.menu-button {
+  display: none;
+}
+
+@include responsive($breakpoint-desktop) {
+  .hideOnMobile { display: none; }
+  .menu-button { display: block; }
+}
+
+@include responsive($breakpoint-mobile) {
+  .sidebar { width: 100%; }
+}
+
+// ========================================
+// Hero Section
+// ========================================
+.heroImage {
+  @include flex-center;
+  width: 100%;
+  height: 750px;
+  background-image: linear-gradient(rgba(61, 105, 53, 0.5), rgba(61, 105, 53, 0.5)),
+    url("/Assets/MovalHero.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heroContentContainer {
+  display: flex;
+  color: $white;
+  text-align: left;
+  width: 100%;
+  gap: 64px;
+}
+
+.heroContent {
+  @include flex-column(48px);
+  flex: 0.3;
+}
+
+.heroTextContainer {
+  @include flex-column(32px);
+}
+
+.heroTitleContainer {
+  @include flex-column(16px);
+}
+
+.heroSubtitleContainer {
+  @include flex-center;
+  gap: 16px;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 60px;
+    border-radius: 999px;
+    background-color: $white;
+    box-shadow: 0px 2px 0px #1b1b1b;
+  }
+}
+
+.heroSubtitle {
+  color: $white;
+  font-size: $fs-subtitle-1;
+  text-shadow: 0px 2px 0px $grey-300;
+  font-weight: 400;
+}
+
+.ctaContainer {
+  @include flex-column(12px);
+}
+
+// ========================================
+// About Section
+// ========================================
+.sectionAboutContent {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  align-items: stretch;
+
+  @include responsive($breakpoint-tablet) {
+    flex-direction: column;
+  }
+}
+
+.divAboutLeft,
+.divAboutRight {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.divAboutLeft {
+  @include flex-center;
+}
+
+.imageCard {
+  width: 100%;
+  height: 700px;
+  padding: 16px;
+  background-color: $white;
+  box-shadow: $shadow-m1;
+  border-radius: 12px;
+  transform: rotate(-1.3deg);
+  overflow: hidden;
+  @include flex-center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.divAboutRight {
+  @include flex-column(32px);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  padding: clamp(16px, 3vw, 32px);
+  overflow: hidden;
+}
+
+.divAboutPostitContainer {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: clamp(8px, 1.2vw, 16px);
+}
+
+.divAboutPostit {
+  @include flex-column(16px);
+  justify-content: center;
+  height: fit-content;
+  padding: clamp(10px, 2rem, 144541px);
+  flex: 1 1 1;
+  max-width: 220px;
+  box-shadow: $shadow-m1;
+  min-width: 0;
+  transition: 200ms;
+
+  p {
+    font-family: $ff-display;
+    font-weight: 300;
+    font-size: clamp(16px, 1.2vw, 20px);
+    line-height: 1.1;
+  }
+
+  span {
+    font-family: $ff-body;
+    font-weight: 500;
+    font-size: clamp(11px, 0.95vw, 14px);
+    opacity: 0.8;
+  }
+
+  @include responsive($breakpoint-tablet) {
+    flex: 1 1 clamp(150px, 45%, 220px);
+    max-width: none;
+  }
+}
+
+@mixin postit-color($color, $rotate, $hover-rotate) {
+  background-color: $color;
+  transform: rotate($rotate);
+  
+  &:hover {
+    transform: rotate($hover-rotate);
+    box-shadow: $shadow-m4;
+  }
+}
+
+.postIt1 { @include postit-color(#87cddc, -2.5deg, 6deg); }
+.postIt2 { @include postit-color(#eee8a2, -1.8deg, 6deg); }
+.postIt3 { @include postit-color(#e0b4e8, 2.2deg, -4.2deg); }
+
+// ========================================
+// Padre Lucas Section
+// ========================================
+.padreLucasContent {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.padreLucasImg {
+  padding: 16px;
+  flex: 2 1 0;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: $shadow-m2;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}
+
+.padreLucasTextContainer {
+  flex: 1 1 0;
+  @include flex-column(24px);
+  justify-content: center;
+  text-align: left;
+  align-items: flex-start;
+}
+
+// ========================================
+// Team Section
+// ========================================
+.ourTeamCards {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+}
+
+.ourTeamCard {
+  @include card-base;
+  @include flex-column(24px);
+  text-align: center;
+  width: 100%;
+
+  img {
+    border-radius: 8px;
+    height: 340px;
+    width: 100%;
+    background-color: rgb(194, 194, 194);
+  }
+}
+
+.ourTeamCardTextContainer {
+  @include flex-column(12px);
+  text-align: center;
+}
+
+// ========================================
+// Activities Section
+// ========================================
+.activitiesGrid {
+  width: 100%;
+  @include flex-column(40px);
+}
+
+.activitiesRow {
+  display: flex;
+  gap: 40px;
+}
+
+.activityCard {
+  @include card-base;
+  @include flex-column(24px);
+  text-align: center;
+  width: 100%;
+}
+
+.activityIcon {
+  font-size: 80px;
+  color: $primary-color;
+}
+
+.activityCardTextContainer {
+  @include flex-column(12px);
+}
+
+// ========================================
+// WhatsApp Button
+// ========================================
+#WhatsappButton {
+  position: fixed;
+  right: 10%;
+  bottom: 10%;
+  z-index: 9999;
+  cursor: pointer;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2));
+  transition: transform 0.15s ease, filter 0.15s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.25));
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+// ========================================
+// Map Section
+// ========================================
+iframe {
+  box-sizing: border-box;
+  padding: 16px;
+  width: 100%;
+  height: 550px;
+  background-color: $white;
+  border-radius: 24px;
+  box-shadow: $shadow-m2;
+}
+
+// ========================================
+// Checklist Section
+// ========================================
+.checkListSectionContent {
+  display: flex;
+  width: 100%;
+}
+
+.checkList {
+  flex: 1 1 0;
+  @include flex-column;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  cursor: pointer;
+
+  span {
+    font-family: $ff-display;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 4px solid #000;
+    background: $white;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    transform: rotate(var(--rot));
+
+    &::after {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 6px;
+      border-left: 4px solid #000;
+      border-bottom: 4px solid #000;
+      transform: rotate(-45deg) scale(0);
+      transform-origin: center;
+      transition: transform 0.1s ease;
+    }
+
+    &:checked {
+      &::after {
+        transform: rotate(-45deg) scale(1);
+      }
+
+      & + span {
+        text-decoration: line-through;
+        opacity: 0.65;
+      }
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &:nth-child(5n + #{$i}) {
+      --rot: #{(-4deg + ($i - 1) * 2deg)};
+    }
+  }
+}
+
+.checkListPhotos {
+  flex: 2 1 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+// ========================================
+// FAQ Section
+// ========================================
+.FaqContainer {
+  @include flex-column(24px);
+  width: 100%;
+  align-items: center;
+}
+
+.Faq {
+  width: 75%;
+  padding: 14px 16px;
+  border: solid 2px $grey-300;
+  box-shadow: 0px 3px $grey-300;
+  background-color: $white;
+  display: flex;
+  border-radius: 12px;
+  justify-content: space-between;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// ========================================
+// Footer Section
+// ========================================
+#FooterSection {
+  margin: 0;
+}
+
+.footerContentContainer {
+  width: 100vw;
+  height: fit-content;
+  @include flex-center;
+  @include flex-column;
+
+}
+
+.footerTextContainer {
+  transform: translateY(8rem);
+  @include flex-column(32px);
+  text-align: center;
+  align-items: center;
+  max-width: 75%;
+}
+
+.sunrise {
+  background-image: linear-gradient(rgba(241, 241, 241, 1), rgba(255, 205, 161, 1));
+
+}
+
+// ========================================
+// Form Styles
+// ========================================
+#formBody {
+  @include flex-column(64px);
+}
+
+.listaDeCosasALlevar,
+.fichaDelAcampante {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 40px;
+  margin: 0;
+}
+
+.sectionCardStyleContainer {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 40px 75px;
+  max-width: 1420px;
+  gap: 60px;
+  flex-direction: column;
+  background-color: $white;
+  box-shadow: $shadow-m2;
+}
+
+.itemsListContainer {
+  width: 100%;
+  display: flex;
+  gap: 128px;
+}
+
+.itemsList {
+  @include flex-column(12px);
+}
+
+.costo {
+  @include flex-column(12px);
+  padding: 40px 0;
+}
+
+.form {
+  @include flex-column(20px);
+}
+
+.formLine {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+
+  input,
+  select {
+    padding: 16px 24px;
+    flex: 1;
+    box-shadow: $shadow-m1;
+    border: none;
+    font-family: $ff-body;
+  }
+
+  p {
+    margin: auto;
+    height: fit-content;
+    flex: 0.4;
+  }
+}
+
+.healthFieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+
+  legend {
+    margin-bottom: 10px;
+  }
+}
+
+.healthCheckboxGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 10px 18px;
+
+  @include responsive(520px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+  }
+}
+
+.healthCheck {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: $grey-300;
+  }
+}
+
+.formTableBlock {
+  @include flex-column(12px);
+  margin-top: 8px;
+}
+
+.formTableWrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 16px;
+  box-shadow: $shadow-m1;
+  background: $white;
+}
+
+.formTable {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+
+  thead th {
+    text-align: left;
+    padding: 14px 16px;
+    background: #fafafa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+    & + th {
+      border-left: 1px solid rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+    & + td {
+      border-left: 1px solid rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  @media (min-width: 900px) {
+    min-width: 0;
+  }
+}
+
+.tableInput {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: $ff-body;
+  box-shadow: none;
+}
+
+.tableHint {
+  opacity: 0.65;
+}
+
+
+.variableInputContainer{
+  display: none;
+}
+
+.finalFormPart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: inherit;
+  @include flex-column(24px);
+  max-width: 1420px;
+  margin: 40px;
+  .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    p{
+      min-width: 400px;
+      width: 40%;
+      max-width: 600px;
+    }
+  }
+}

@@ -327,7 +327,7 @@ nav li:last-child {
       rgba(61, 105, 53, 0.5),
       rgba(61, 105, 53, 0.5)
     ),
-    url("Assets/MovalHero.jpg");
+    url("/Assets/MovalHero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -697,32 +697,32 @@ nav li:last-child {
 
 .activityFogones {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
-    url("Assets/Actividad_Fogones.png");
+    url("/Assets/Actividad_Fogones.png");
 }
 
 .activityEnsayos {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
-    url("Assets/Actividad_Caminata.png");
+    url("/Assets/Actividad_Caminata.png");
 }
 
 .activityReflexion {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
-    url("Assets/Actividad_Reflexion.png");
+    url("/Assets/Actividad_Reflexion.png");
 }
 
 .activityJuegosNocturnos {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
-    url("Assets/Actividad_Juegos_Nocturnos.png");
+    url("/Assets/Actividad_Juegos_Nocturnos.png");
 }
 
 .activityCocina {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
-    url("Assets/Actividad_Cocina.png");
+    url("/Assets/Actividad_Cocina.png");
 }
 
 .activityCaminatas {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
-    url("Assets/Actividad_Caminata.png");
+    url("/Assets/Actividad_Caminata.png");
 }
 
 /**************************************** Map ****************************************/
@@ -868,7 +868,7 @@ iframe {
   height: fit-content;
   display: flex;
   align-items: center;
-  padding: 0px 40px;
+
   max-width: 1420px;
   flex-direction: column;
 }
