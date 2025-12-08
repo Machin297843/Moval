@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Moval - Ficha del acampante</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/moval_sass.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,7 +36,7 @@
         </li>
       </ul>
       <ul>
-        <li><img src="Assets/MovalLogo.png" alt="Moval Logo" /></li>
+        <li><img src="Assets/MovalLogo.webp" alt="Moval Logo" /></li>
         <li class="hideOnMobile" class="typ-body"><a href="index.html">Nosotros</a></li>
         <li class="hideOnMobile" class="typ-body"><a href="index.html">Actividades</a></li>
         <li class="hideOnMobile" class="typ-body"><a href="index.html">Ubicacion</a></li>
@@ -56,34 +56,93 @@
           <div class="itemsListContainer">
             <div class="itemsList">
               <p class="typ-subtitle-2">Cosas para llevar a Moval</p>
-              <p class="typ-body">
-                • Ropa para los 7 días <br />
-                • Almuerzo para compartir el primer día.<br />
-                • Artículos de higiene personal.<br />
-                • Papel higiénico, repelente y protector para el sol.<br />
-                • Sobre de dormir.<br />
-                • Chancletas, gorro, traje de baño y abrigo. <br />
-                • Plato hondo en lo posible, cubiertos y vaso. <br />
-                • Linterna (CON PILAS !!!!!),<br />
-                • Nylon (2 mts), Cuerda (5 mts) y palillos de ropa.<br />
-                • 1 Bidón de Agua.
-              </p>
+              <ul>
+                <li>
+                  <p class="typ-body">
+                    Ropa para los 7 días.
+                  </p>
+                </li>
+                <li>
+                  <p class="typ-body">
+                    Almuerzo para compartir el primer día.
+                  </p>
+                </li>
+                <li>
+                  <p class="typ-body">
+                    Artículos de higiene personal.
+                  </p>
+                </li>
+                <li>
+                  <p class="typ-body">
+                    Papel higiénico, repelente y protector para el sol.
+                  </p>
+                </li>
+                <li>
+                  <p class="typ-body">
+                    Sobre de dormir.
+                  </p>
+                </li>
+                <li>
+                  <p class="typ-body">
+                    Chancletas, gorro, traje de baño y abrigo.
+                  </p>
+                </li>
+                <li>
+                  <p class="typ-body">
+                    Plato hondo en lo posible, cubiertos y vaso.
+                  </p>
+                </li>
+                <li>
+                  <p class="typ-body">
+                    Linterna (CON PILAS !!!!!),
+                  </p>
+                </li>
+                <li>
+                  <p class="typ-body">
+                    Nylon (2 mts), Cuerda (5 mts) y palillos de ropa.
+                  </p>
+                </li>
+                <li>
+                  <p class="typ-body">
+                    1 Bidón de Agua.
+                  </p>
+                </li>
+              </ul>
+
             </div>
             <div class="importantContainer">
               <p class="typ-subtitle-2">IMPORTANTE!</p>
-              <p class="typ-body">
-                • NO LLEVAR CELULAR  <br />
-                • NO LLEVAR DINERO <br />
-                • ETIQUETAR LAS PERTENENCIAS <br />
-                • QUE EL ACAMPANTE ARME EL BOLSO PARA SABER QUÉ LLEVA
-              </p>
+              <ul>
+                <li>
+                  <p class="typ-body">
+                    NO LLEVAR CELULAR
+                  </p>
+                </li>
+                <li>
+                  <p class="typ-body">
+                    NO LLEVAR DINERO
+                  </p>
+                </li>
+                <li>
+                  <p class="typ-body">
+                    ETIQUETAR LAS PERTENENCIAS
+                  </p>
+                </li>
+                <li>
+                  <p class="typ-body">
+                    QUE EL ACAMPANTE ARME EL BOLSO PARA SABER QUÉ LLEVA
+                  </p>
+                </li>
+              </ul>
+
             </div>
           </div>
           <div class="costo">
-            <p class="typ-subtitle-2">El costo del campamento es de 5000 pesos. </p>
-            <p class="typ-body">En lo posible se solicita se abone cuando se realiza la inscripción (hasta el 15 de diciembre se reciben)
-Como siempre ningún niño deja de ir por no poder abonarlo. Cada uno colabora con lo que puede.
-Los esperamos!!!!!!</p>
+            <p class="typ-subtitle-2">El costo del campamento es de 5500 pesos. </p>
+            <p class="typ-body">En lo posible se solicita se abone cuando se realiza la inscripción (hasta el 19 de diciembre se reciben).
+              <br><span class="fw-700">Como siempre ningún niño deja de ir por no poder abonarlo. Cada uno colabora con lo que puede.
+Los esperamos!!!!!!</span>
+</p>
           </div>
         </div>
       </div>
@@ -93,92 +152,95 @@ Los esperamos!!!!!!</p>
         <p class="typ-subtitle-1">FICHA DEL ACAMPANTE MOVAL 2026</p>
         <form action="" method="post" class="form">
           <div class="formLine">
-            <p class="typ-lead">NOMBRE Y APELLIDO</p><input id="" type="text" value="" class="formInput" placeholder="Ingrese...">
+            <p class="typ-lead">NOMBRE Y APELLIDO</p><input id="nameInput" maxlength="100" type="text" value="" class="formInput" placeholder="Ingrese...">
           </div>
           <div class="formLine">
-            <p class="typ-lead">FECHA DE NACIMIENTO</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
+            <p class="typ-lead">EDAD</p><input id="ageInput" type="number" min="1" max="19" step="1"  class="formInput" placeholder="Ingrese...">
           </div>
           <div class="formLine">
-            <p class="typ-lead">CÉDULA DE IDENTIDAD</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
+            <p class="typ-lead">CÉDULA DE IDENTIDAD</p><input id="ciInput" type="number" min="10000000" max="99999999" class="formInput" placeholder="Ingrese...">
           </div>
           <div class="formLine">
-            <p class="typ-lead">TELÉFONO PARTICULAR</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
+            <p class="typ-lead">TELÉFONO PARTICULAR</p><input id="telInput" type="number" min="10000000" max="99999999" class="formInput" placeholder="Ingrese...">
           </div>
           <div class="formLine">
-            <p class="typ-lead">CEL.  DE PADRE Y/O MADRE</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
+            <p class="typ-lead">CEL.  DE PADRE Y/O MADRE</p><input id="parentCelInput" type="number" min="90000000" max="99999999"  class="formInput" placeholder="Ingrese...">
           </div>
           <div class="formLine">
-            <p class="typ-lead">SOCIEDAD MÉDICA</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
+            <p class="typ-lead">Domicilio</p><input id="addressInput" type="text" maxlength="100" class="formInput" placeholder="Ingrese...">
           </div>
           <div class="formLine">
-            <p class="typ-lead">EMERGENCIA MÉDICA</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
+            <p class="typ-lead">SOCIEDAD MÉDICA</p><input id="hospitalInput" type="text" maxlength="100" class="formInput" placeholder="Ingrese...">
+          </div>
+          <div class="formLine">
+            <p class="typ-lead">EMERGENCIA MÉDICA</p><input id="medicalEmergencyInput" type="text" maxlength="100" class="formInput" placeholder="Ingrese...">
           </div>
           <div class="formLine">
             <p class="typ-lead">¿PADECE ALGUNA ENFERMEDAD?</p> 
-              <select name="" id=""> 
+              <select name="" onchange="renderIllness()" id="illnessChkInput"> 
                 <option value="">Seleccione una opción</option>
-                <option value="si">Si</option>
-                <option value="no">No</option>
+                <option value=true>Si</option>
+                <option value=false>No</option>
               </select>
           </div>
-           <div class="formLine">
-            <p class="typ-lead">¿CUAL?</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
+           <div class="formLine variableInputContainer" id="illnessInputContainer">
+            <p class="typ-lead">¿CUAL?</p><input id="illnessInput" type="text" maxlength="100"  class="formInput" placeholder="Ingrese...">
           </div>
           <fieldset class="healthFieldset">
     <legend class="typ-lead">PROPENSO A SUFRIR:</legend>
 
     <div class="healthCheckboxGrid">
-      <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="oidos" />
+      <label class="healthCheck" >
+        <input type="checkbox" id="suceptibleOidos" name="propenso[]" />
         <span class="typ-body">Oídos</span>
       </label>
 
       <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="garganta" />
+        <input type="checkbox" id="suceptibleGarganta" name="propenso[]" />
         <span class="typ-body">Garganta</span>
       </label>
 
       <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="bronquitis" />
+        <input type="checkbox" id="suceptibleBronquitis" name="propenso[]" />
         <span class="typ-body">Bronquitis</span>
       </label>
 
       <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="asma" />
+        <input type="checkbox" id="suceptibleAsma" name="propenso[]" />
         <span class="typ-body">Asma</span>
       </label>
 
       <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="dolor_cabeza" />
+        <input type="checkbox" id="suceptibleDolorCabeza" name="propenso[]" />
         <span class="typ-body">Dolor de cabeza</span>
       </label>
 
       <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="mareos" />
+        <input type="checkbox" id="suceptibleMareos" name="propenso[]" />
         <span class="typ-body">Mareos</span>
       </label>
 
       <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="trastornos_digestivos" />
+        <input type="checkbox" id="suceptibleTrastornosDigestivos" name="propenso[]" />
         <span class="typ-body">Trastornos digestivos</span>
       </label>
 
       <label class="healthCheck">
-        <input type="checkbox" name="propenso[]" value="resfrio_tos" />
+        <input type="checkbox" id="suceptibleResfrioTos" name="propenso[]" />
         <span class="typ-body"> Resfrío o tos</span>
       </label>
     </div>
           </fieldset>
-          <div class="formLine">
-            <p class="typ-lead">¿ESTÁ SIGUIENDO ALGÚN TRATAMIENTO MÉDICO?</p> 
-              <select name="" id=""> 
+          <div class="formLine" >
+            <p class="typ-lead ">¿ESTÁ SIGUIENDO ALGÚN TRATAMIENTO MÉDICO?</p> 
+              <select name="" onchange="renderTreatment()" id="treatmentChkInput"> 
                 <option value="">Seleccione una opción</option>
                 <option value="si">Si</option>
                 <option value="no">No</option>
               </select>
           </div>
-           <div class="formLine">
-            <p class="typ-lead">¿CUAL?</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
+           <div class="formLine variableInputContainer" id="treatmentInputContainer">
+            <p class="typ-lead">¿CUAL?</p><input id="treatmentInput" type="text" maxlength="100"  class="formInput" placeholder="Ingrese...">
           </div>
           <div class="formTableBlock">
   <p class="typ-lead">MEDICACIÓN (si corresponde)</p>
@@ -196,8 +258,9 @@ Los esperamos!!!!!!</p>
           <td>
             <input
               type="text"
+              maxlength="100"
               name="medicamento[]"
-              class="tableInput"
+              class="tableInput tableMedicationsInputName"
               placeholder="Ej: Salbutamol"
             />
           </td>
@@ -205,7 +268,8 @@ Los esperamos!!!!!!</p>
             <input
               type="text"
               name="dosis[]"
-              class="tableInput"
+              maxlength="100"
+              class="tableInput tableMedicationsInputDosis"
               placeholder="Ej: 2 puffs"
             />
           </td>
@@ -216,7 +280,8 @@ Los esperamos!!!!!!</p>
             <input
               type="text"
               name="medicamento[]"
-              class="tableInput"
+              maxlength="100"
+              class="tableInput tableMedicationsInputName"
               placeholder="Ingrese..."
             />
           </td>
@@ -224,7 +289,8 @@ Los esperamos!!!!!!</p>
             <input
               type="text"
               name="dosis[]"
-              class="tableInput"
+              maxlength="100"
+              class="tableInput tableMedicationsInputDosis"
               placeholder="Ingrese..."
             />
           </td>
@@ -235,7 +301,8 @@ Los esperamos!!!!!!</p>
             <input
               type="text"
               name="medicamento[]"
-              class="tableInput"
+              maxlength="100"
+              class="tableInput tableMedicationsInputName"
               placeholder="Ingrese..."
             />
           </td>
@@ -243,7 +310,8 @@ Los esperamos!!!!!!</p>
             <input
               type="text"
               name="dosis[]"
-              class="tableInput"
+              maxlength="100"
+              class="tableInput tableMedicationsInputDosis"
               placeholder="Ingrese..."
             />
           </td>
@@ -256,19 +324,30 @@ Los esperamos!!!!!!</p>
     Si no toma medicación, podés dejarlo en blanco.
   </p>
 </div>
-<div class="formLine">
+<div class="formLine " >
             <p class="typ-lead">¿TIENE CONTRAINDICADO ALGÚN MÉDICO?</p> 
-              <select name="" id=""> 
+              <select name="" onchange="renderContraindicated()" id="contraindicatedChkInput"> 
                 <option value="">Seleccione una opción</option>
                 <option value="si">Si</option>
                 <option value="no">No</option>
               </select>
           </div>
-           <div class="formLine">
-            <p class="typ-lead">¿CUAL?</p><input id="" type="text" value=""  class="formInput" placeholder="Ingrese...">
+           <div class="formLine variableInputContainer" id="contraindicatedInputContainer">
+            <p class="typ-lead">¿CUAL?</p><input id="contraindicatedInput" type="text" maxlength="100"  class="formInput" placeholder="Ingrese...">
+          </div>
+          <div class="formLine" style="display: none;" id="">
+            <p class="typ-lead" style="display: none;">Este Campo no se debe llenar</p><input style="display: none;" id="serialNumberInput" type="number" min="0" max="100" step="1" maxlength="100"  class="formInput" placeholder="Ingrese...">
           </div>
         </form>
       </div>
     </section>
+    <section class="finalFormPart">
+      <div class="flex">
+        <input type="checkbox" name="" id="authorizationChkInput" />
+        <p>Autorizo a mi hijo/a,  a concurrir al campamento de MOVAL que se celebrará en TRES ARROYOS los días 7 al 14 de enero de 2026 y a Patricia Durdos y al cuerpo de monitores a tomar las decisiones que crean convenientes para la salud y bienestar de mi hijo/a.</p>
+      </div>
+      <button class="btnPrimary" id="submitFormBtn">ENVIAR FICHA</button>
+    </section>
+    <script src="/js/form.js"></script>
   </body>
 </html>
