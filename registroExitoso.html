@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscripcion Realizada - Moval</title>
+    <link rel="icon" type="image/png" href="Assets/Favico.png" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #407135;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        overflow-x: hidden;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 30px;
+        padding: 60px 50px;
+        max-width: 600px;
+        width: 100%;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        position: relative;
+        animation: slideUp 0.6s ease-out;
+        overflow: hidden;
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .icon-wrapper {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 30px;
+        position: relative;
+      }
+
+      .checkmark-circle {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: #407135;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: scaleIn 0.5s ease-out 0.2s backwards;
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+      }
+
+      @keyframes scaleIn {
+        from {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      .checkmark {
+        width: 60px;
+        height: 60px;
+        stroke: white;
+        stroke-width: 4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        animation: drawCheck 0.6s ease-out 0.4s forwards;
+      }
+
+      @keyframes drawCheck {
+        from {
+          stroke-dashoffset: 100;
+        }
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      h1 {
+        color: #2d3748;
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 15px;
+        font-weight: 700;
+        animation: fadeIn 0.6s ease-out 0.5s backwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .subtitle {
+        color: #718096;
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+        line-height: 1.6;
+        animation: fadeIn 0.6s ease-out 0.6s backwards;
+      }
+
+      .subtitle span {
+        font-weight: 500;
+        color: #407135;
+      }
+
+      .info-card {
+        background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 30px;
+        animation: fadeIn 0.6s ease-out 0.7s backwards;
+        border: 2px solid #e2e8f0;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .info-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .info-icon {
+        width: 40px;
+        height: 40px;
+        background: #407135;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        flex-shrink: 0;
+      }
+
+      .info-icon svg {
+        width: 20px;
+        height: 20px;
+        stroke: white;
+        stroke-width: 2.5;
+        fill: none;
+      }
+
+      .info-content {
+        flex: 1;
+      }
+
+      .info-label {
+        font-size: 0.85rem;
+        color: #718096;
+        margin-bottom: 3px;
+        font-weight: 500;
+      }
+
+      .info-value {
+        font-size: 1.05rem;
+        color: #2d3748;
+        font-weight: 600;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+        animation: fadeIn 0.6s ease-out 0.8s backwards;
+      }
+
+      .btn {
+        flex: 1;
+        padding: 16px 24px;
+        border: none;
+        border-radius: 15px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .btn-primary {
+        background: #407135;
+        color: white;
+        box-shadow: 0 4px 15px rgba(64, 113, 53, 0.4);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(64, 113, 53, 0.5);
+      }
+
+      .btn-secondary {
+        background: white;
+        color: #407135;
+        border: 2px solid #407135;
+      }
+
+      .btn-secondary:hover {
+        background: #f7fafc;
+        transform: translateY(-2px);
+      }
+
+      .decorative-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: #407135;
+        opacity: 0.1;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .circle-1 {
+        width: 100px;
+        height: 100px;
+        top: -50px;
+        right: -50px;
+      }
+
+      .circle-2 {
+        width: 150px;
+        height: 150px;
+        bottom: -75px;
+        left: -75px;
+        animation-delay: 1s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .confetti {
+        position: fixed;
+        width: 10px;
+        height: 10px;
+        background: #667eea;
+        top: -20px;
+        animation: confetti-fall 3s linear;
+        z-index: 1000;
+      }
+
+      @keyframes confetti-fall {
+        from {
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+        }
+        to {
+          transform: translateY(calc(100vh + 20px)) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 40px 30px;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        .buttons {
+          flex-direction: column;
+        }
+
+        .btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="decorative-circle circle-1"></div>
+      <div class="decorative-circle circle-2"></div>
+
+      <div class="icon-wrapper">
+        <div class="checkmark-circle">
+          <svg class="checkmark" viewBox="0 0 52 52">
+            <path d="M14 27l7 7 16-16" />
+          </svg>
+        </div>
+      </div>
+
+      <h1>¡Reserva Confirmada!</h1>
+      <p class="subtitle">
+        <span>
+          Les solicitamos enviar el comprobante de pago a nuestro correo
+          inscripciones@moval.uy antes del 19 de diciembre.
+        </span>
+      </p>
+
+      <div class="info-card">
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              />
+            </svg>
+          </div>
+          <div class="info-content">
+            <div class="info-label">Nombre de Campamentista</div>
+            <div class="info-value" id="name"></div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <div class="info-content">
+            <div class="info-label">Fecha del Campamento</div>
+            <div class="info-value" id="checkInDate">07 de Enero, 2026</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <div class="info-content">
+            <div class="info-label">Ubicación</div>
+            <div class="info-value">Tres Arroyos</div>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <a href="/" class="btn btn-secondary"> Volver al Inicio </a>
+      </div>
+    </div>
+
+    <script>
+      // Generar confeti
+
+      const reqQuerys = new URLSearchParams(window.location.search);
+      console.log(reqQuerys.get('name'));
+      const name = reqQuerys.get('name') || 'Aventurero';
+      document.getElementById('name').textContent = name;
+
+      function createConfetti() {
+        const colors = ['#667eea', '#764ba2', '#f093fb', '#4facfe'];
+        for (let i = 0; i < 50; i++) {
+          setTimeout(() => {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.background =
+              colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.animationDelay = Math.random() * 0.5 + 's';
+            confetti.style.animationDuration = Math.random() * 2 + 2 + 's';
+            document.body.appendChild(confetti);
+
+            setTimeout(() => confetti.remove(), 3000);
+          }, i * 30);
+        }
+      }
+
+      // Generar número de confirmación aleatorio
+      function generateConfirmationNumber() {
+        const num = Math.floor(Math.random() * 9000) + 1000;
+        document.getElementById(
+          'confirmNumber'
+        ).textContent = `CAMP-2024-${num}`;
+      }
+
+      // Función para descargar confirmación (simulada)
+      function downloadConfirmation() {
+        alert(
+          '¡Tu confirmación se está descargando! En un caso real, aquí se generaría un PDF con todos los detalles de tu reserva.'
+        );
+      }
+
+      // Inicializar al cargar
+      window.addEventListener('load', () => {
+        createConfetti();
+        generateConfirmationNumber();
+      });
+    </script>
+  </body>
+</html>
