@@ -2,6 +2,7 @@
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -135,12 +136,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0px 40px;
+  padding: 2rem;
   max-width: 1420px;
-  gap: 60px;
+  gap: 40px;
   flex-direction: column;
 }
-
 section {
   margin-bottom: 120px;
   width: 100%;
@@ -178,7 +178,6 @@ section {
 /**************************************** Buttons ****************************************/
 
 .btnPrimary {
-  box-sizing: border-box;
   font-family: var(--ff-display);
   font-size: 20px;
   font-weight: 400;
@@ -234,7 +233,6 @@ nav {
   box-shadow: var(--shadow-m1);
 }
 nav ul {
-  box-sizing: border-box;
   padding: 6px 40px;
   margin: auto;
   max-width: 1500px;
@@ -289,7 +287,6 @@ nav li:last-child {
 }
 
 .sidebar a {
-  box-sizing: border-box;
   height: 100%;
   padding: 15px 30px;
   width: 100%;
@@ -302,7 +299,7 @@ nav li:last-child {
   display: none;
 }
 
-@media (max-width: 967px) {
+@media (max-width: 900px) {
   .hideOnMobile {
     display: none;
   }
@@ -445,10 +442,7 @@ nav li:last-child {
   align-items: center;
   gap: 32px;
 
-  width: 100%;
   padding: clamp(16px, 3vw, 32px);
-
-  overflow: hidden;
 }
 
 /* Contenedor de post-its */
@@ -522,8 +516,7 @@ nav li:last-child {
   box-shadow: var(--shadow-m4);
 }
 
-/* Ajustes extra en pantallas chicas */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .divAboutPostit {
     flex: 1 1 clamp(150px, 45%, 220px);
     max-width: none;
@@ -531,8 +524,8 @@ nav li:last-child {
   .sectionAboutContent {
     display: flex;
     flex-direction: column;
-    gap: 40px;
     align-items: stretch;
+    height: fit-content;
   }
 }
 
@@ -573,6 +566,27 @@ nav li:last-child {
   gap: 24px;
 }
 
+@media (max-width: 900px) {
+  .padreLucasContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .padreLucasTextContainer {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
 /**************************************** Our Team ****************************************/
 
 .ourTeamCards {
@@ -581,8 +595,16 @@ nav li:last-child {
   gap: 40px;
 }
 
+@media (max-width: 900px) {
+  .ourTeamCards {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+}
 .ourTeamCard {
-  padding: 24px;
+  padding: 2vw;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -601,65 +623,103 @@ nav li:last-child {
 }
 .ourTeamCard img {
   border-radius: 8px;
-  height: 340px;
+  aspect-ratio: 4/3;
   width: 100%;
   background-color: rgb(194, 194, 194);
 }
 
 /**************************************** Activities ****************************************/
 
+.activitiesSection {
+  width: 100%;
+}
+
 .activitiesGrid {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2.2vw, 40px);
 }
 
-.activitiesRow {
-  display: flex;
-  gap: 40px;
+/* Cambio principal a 2 columnas */
+@media (max-width: 900px) {
+  .activitiesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
+
+/* Extra opcional para celulares chicos */
+@media (max-width: 520px) {
+  .activitiesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------------------------------------------------
+   Card base
+--------------------------------------------------------- */
 
 .activityCard {
-  height: 10rem;
-  padding: clamp(0rem, 2.4rem, 3.4rem);
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-color: white;
-  box-shadow: var(--shadow-m1);
-  border-radius: 12px;
+  position: relative;
   width: 100%;
+  min-height: clamp(140px, 18vw, 200px);
+  padding: clamp(16px, 2vw, 28px);
+
+  display: flex;
+  align-items: flex-end;
+
+  border-radius: 12px;
+  background-color: #fff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  box-shadow: var(--shadow-m2);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.activityCard p {
-  margin-top: auto;
-  color: white;
+.activityCard:hover {
+  box-shadow: var(--shadow-m4);
+  transform: translateY(-2px);
 }
+
+/* Título dentro de la card */
+.activityTitle {
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------------------------------------------------------
+   Fondos por actividad
+   Mantenible y fácil de editar
+--------------------------------------------------------- */
 
 .activityFogones {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
     url("Assets/Actividad_Fogones.png");
 }
+
 .activityEnsayos {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
     url("Assets/Actividad_Caminata.png");
 }
+
 .activityReflexion {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
     url("Assets/Actividad_Reflexion.png");
 }
-.activityCocina {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
-    url("Assets/Actividad_Cocina.png");
-}
+
 .activityJuegosNocturnos {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
     url("Assets/Actividad_Juegos_Nocturnos.png");
 }
+
+.activityCocina {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+    url("Assets/Actividad_Cocina.png");
+}
+
 .activityCaminatas {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
     url("Assets/Actividad_Caminata.png");
@@ -668,7 +728,6 @@ nav li:last-child {
 /**************************************** Map ****************************************/
 
 iframe {
-  box-sizing: border-box;
   padding: 16px;
   width: 100%;
   height: 550px;
@@ -764,6 +823,15 @@ iframe {
 .checkListPhotos {
   flex: 2 1 0;
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+  .checkListPhotos {
+    display: none;
+  }
+  .checkList {
+    align-items: center;
+  }
 }
 /**************************************** FAQ ****************************************/
 

@@ -21,26 +21,6 @@
   </head>
   <body>
     
-    <!-- Whatsapp fixedbutton -->
-    <div class="sectionContentContainer">
-      <svg
-        id="WhatsappButton"
-        width="67"
-        height="68"
-        viewBox="0 0 67 68"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M67 34C67 52.7777 52.0015 68 33.5 68C14.9985 68 0 52.7777 0 34C0 15.2223 14.9985 0 33.5 0C52.0015 0 67 15.2223 67 34Z"
-          fill="#53C95B"
-        />
-        <path
-          d="M47.8924 19.7044C51.5279 23.3398 53.7784 28.1006 53.7784 33.2941C53.7784 43.8543 44.9494 52.5102 34.3026 52.5102C31.1 52.5102 27.9838 51.6446 25.1274 50.1731L15 52.7699L17.6833 42.8156C16.0387 39.9592 15.0866 36.6699 15.0866 33.2076C15.0866 22.6474 23.7425 13.9915 34.3026 13.9915C39.4962 13.9915 44.3435 16.0689 47.8924 19.7044ZM34.3026 49.221C43.1317 49.221 50.4892 42.0366 50.4892 33.2941C50.4892 28.9662 48.6714 24.9845 45.6419 21.9549C42.6123 18.9253 38.6306 17.2807 34.3892 17.2807C25.5602 17.2807 18.3758 24.4651 18.3758 33.2076C18.3758 36.2371 19.2414 39.1801 20.7994 41.7769L21.2322 42.3828L19.5876 48.2688L25.6468 46.6242L26.1661 46.9704C28.6763 48.4419 31.4462 49.221 34.3026 49.221ZM43.1317 37.2758C43.5645 37.5355 43.9107 37.6221 43.9972 37.8817C44.1704 38.0549 44.1704 39.007 43.7376 40.1323C43.3048 41.2575 41.4005 42.2963 40.5349 42.3828C38.9768 42.6425 37.765 42.5559 34.7354 41.171C29.8881 39.0936 26.772 34.2463 26.5123 33.9866C26.2527 33.6404 24.608 31.3898 24.608 28.9662C24.608 26.6291 25.8199 25.5038 26.2527 24.9845C26.6855 24.4651 27.2048 24.3785 27.551 24.3785C27.8107 24.3785 28.157 24.3785 28.4166 24.3785C28.7629 24.3785 29.1091 24.292 29.5419 25.2441C29.8881 26.1963 30.9268 28.5334 31.0134 28.7931C31.1 29.0527 31.1865 29.3124 31.0134 29.6586C30.1478 31.4764 29.1091 31.3898 29.6285 32.2554C31.5328 35.4581 33.3505 36.5834 36.2069 37.9683C36.6397 38.228 36.8994 38.1414 37.2457 37.8817C37.5053 37.5355 38.4575 36.4102 38.7172 35.9775C39.0634 35.4581 39.4096 35.5447 39.8424 35.7178C40.2752 35.8909 42.6123 37.0162 43.1317 37.2758Z"
-          fill="white"
-        />
-      </svg>
-    </div>
 
     <!-- Navbar-->
     <nav>
@@ -189,7 +169,9 @@
     <section id="padreLucasSection ">
       <div class="sectionContentContainer">
         <div class="padreLucasContent">
-          <div class="padreLucasTextContainer">
+          <div class="padreLucasImg">
+            <img src="Assets/PadreLucas.png" alt="Padre Lucas" />
+          </div><div class="padreLucasTextContainer">
             <div>
               <h1 class="typ-h1">Padre Lucas</h1>
               <h2 class="typ-subtitle-2">1924 - 2014</h2>
@@ -210,50 +192,48 @@
               Leer más
             </a>
           </div>
-          <div class="padreLucasImg">
-            <img src="Assets/PadreLucas.png" alt="Padre Lucas" />
-          </div>
+          
         </div>
       </div>
     </section>
 
     <!-- Activites Section -->
-    <section class="activitiesSection">
-      <div class="sectionContentContainer">
-        <div class="sectionTitleContainer">
-          <h1 class="typ-h2">Nuestras actividades</h1>
-          <p class="typ-lead">
-            Nuestras actividades Subtitulo, algun texto habrá que poner, digo
-            yo, pienso, no se
-          </p>
-        </div>
-        <div class="activitiesGrid">
-          <div class="activitiesRow">
-            <div class="activityCard activityFogones">
-              <p class="typ-subtitle-1">Fogones</p>
-            </div>
-            <div class="activityCard activityEnsayos">
-                <p class="typ-subtitle-1">Ensayos</p>
-            </div>
-            <div class="activityCard activityReflexion">
-                <p class="typ-subtitle-1">Reflexión</p>
-            </div>
-          </div>
-          <div class="activitiesRow">
-            <div class="activityCard activityJuegosNocturnos">
-                <p class="typ-subtitle-1">Juegos Nocturnos</p>
-            </div>
-            <div class="activityCard activityCocina">
-                <p class="typ-subtitle-1">Cocina</p>
-            </div>
-            <div class="activityCard activityCaminatas">
-                <p class="typ-subtitle-1">Caminatas</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+   <section class="activitiesSection" id="activitiesSection">
+  <div class="sectionContentContainer">
+    <header class="sectionTitleContainer">
+      <h2 class="typ-h2">Nuestras actividades</h2>
+      <p class="typ-lead">
+        Nuestras actividades Subtitulo, algun texto habrá que poner, digo yo, pienso, no se
+      </p>
+    </header>
+
+    <div class="activitiesGrid" role="list">
+      <article class="activityCard activityFogones" role="listitem">
+        <h3 class="typ-subtitle-1 activityTitle">Fogones</h3>
+      </article>
+
+      <article class="activityCard activityEnsayos" role="listitem">
+        <h3 class="typ-subtitle-1 activityTitle">Música</h3>
+      </article>
+
+      <article class="activityCard activityReflexion" role="listitem">
+        <h3 class="typ-subtitle-1 activityTitle">Reflexión</h3>
+      </article>
+
+      <article class="activityCard activityJuegosNocturnos" role="listitem">
+        <h3 class="typ-subtitle-1 activityTitle">Juegos nocturnos</h3>
+      </article>
+
+      <article class="activityCard activityCocina" role="listitem">
+        <h3 class="typ-subtitle-1 activityTitle">Cocina</h3>
+      </article>
+
+      <article class="activityCard activityCaminatas" role="listitem">
+        <h3 class="typ-subtitle-1 activityTitle">Caminatas</h3>
+      </article>
+    </div>
+  </div>
+</section>
 
     <!-- Map Section -->
     <section class="mapSection">
